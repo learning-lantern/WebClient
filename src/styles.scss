@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(./assets/fonts/roboto/roboto.css);
+:root{
+    --primary-color:#09052b;
+    --accent-color:#05011d99;
+    --gradient-back: linear-gradient(140deg,#09052b,#05011d99) 
+}
+
+* , *::before, *::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    position: relative;
+}
+
+.logo{
+    width: 50px;
+    margin-right: 0.5rem;
+}
+
+/*filters*/
+
+.filter-blue{
+    filter: invert(51%) sepia(89%) saturate(2920%) hue-rotate(161deg) brightness(95%) contrast(101%);
+}
+
+.filter-purple{
+    filter: invert(23%) sepia(72%) saturate(1418%) hue-rotate(237deg) brightness(91%) contrast(99%);
+}
+
+.filter-grey{
+    filter: invert(83%) sepia(7%) saturate(0) hue-rotate(12deg) brightness(93%) contrast(79%);
+}
+
+
+// icon sizes
+
+.icon50{
+    width: 50px;
+}

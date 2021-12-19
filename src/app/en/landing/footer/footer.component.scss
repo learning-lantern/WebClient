@@ -1,0 +1,103 @@
+.foot-container {
+color: white;
+  background-color: #555;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: auto auto 70px;
+  grid-template-areas: "map" "con" "trade";
+}
+
+.site {
+  display: flex;
+  padding: 1em;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  grid-area: map;
+}
+.links-icons {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.links-icons a {
+  text-decoration: none;
+  color: white;
+
+}
+.links-icons a:hover {
+  font-weight: bold;
+  color: black;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.social-icons img {
+  margin-right: 1rem;
+}
+
+.contact {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+
+  width: 100%;
+  align-items: center;
+
+  padding: 1em;
+  grid-area: con;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+label {
+  align-self: left;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  border-radius: 5px;
+  padding: 0.25em;
+  font-size: 1.4rem;
+  background-color: #bbb;
+}
+.copyright {
+  grid-area: trade;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em;
+
+  flex-direction: column;
+}
+span a,
+.copyright a {
+  color: white;
+  text-decoration: none;
+}
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+@media all and (min-width: 900px) {
+  .foot-container {
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: auto 70px;
+      grid-template-areas: "map con" "trade trade";
+  }
+  
+}

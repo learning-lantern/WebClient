@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './en/landing/header/header.component';
 import { MainComponent } from './en/landing/main/main.component';
 import { FooterComponent } from './en/landing/footer/footer.component';
+import { HeaderArComponent } from './AR/landing/header-ar/header-ar.component';
+import { MainArComponent } from './AR/landing/main-ar/main-ar.component';
+import { FooterArComponent } from './AR/landing/footer-ar/footer-ar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderArComponent,
+    MainArComponent,
+    FooterArComponent
   ],
   imports: [
     BrowserModule,

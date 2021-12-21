@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(./assets/fonts/roboto/roboto.css);
+@import url(./assets/fonts/cairo/cairo.css);
 :root{
     --primary-color:#09052b;
     --accent-color:#05011d99;
@@ -13,7 +13,8 @@
 }
 
 body {
-    font-family: 'roboto', sans-serif;
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
     position: relative;
 }
 
@@ -40,5 +41,5 @@ body {
 // icon sizes
 
 .icon50{
-    width: 50px;
+    width:50px;
 }

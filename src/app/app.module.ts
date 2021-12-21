@@ -16,7 +16,7 @@ import { FooterArComponent } from './AR/landing/footer-ar/footer-ar.component';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    HeaderArComponent,
+ HeaderArComponent,
     MainArComponent,
     FooterArComponent
   ],

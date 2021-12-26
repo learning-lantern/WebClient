@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
-  templateUrl: './footer-ar.component.html',
-  styleUrls: ['./footer-ar.component.scss']
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
-export class FooterArComponent implements OnInit {
+export class FooterComponent implements OnInit {
 
   constructor() { }
 

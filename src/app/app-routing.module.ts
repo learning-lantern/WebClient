@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LandingContainerComponent } from './en/landing/landing-container/landing-container.component';
+
 
 const routes: Routes = [
-  {
-    path:"",
-    component:LandingContainerComponent
-  }
+  { path: "", redirectTo: "ar", pathMatch: "full" },
+  { path: 'ar', loadChildren: () => import('./languages/arabic/arabic.module').then(m => m.ArabicModule) },
+  { path: 'en', loadChildren: () => import('./languages/english/english.module').then(m => m.EnglishModule) },
 ];
 
 @NgModule({

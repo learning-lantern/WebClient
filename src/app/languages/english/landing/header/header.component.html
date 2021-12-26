@@ -1,0 +1,26 @@
+<div class="container">
+    <img src="../../../../assets/logoFinal.png" alt="log" class="logo">
+    <div class="nav-links toggle">
+        <a routerLink="" class="nav-item" [class.active]="isActive == 'home'" (click)="changeActive('home')">Home</a>
+        <a routerLink="" class="nav-item" [class.active]="isActive == 'service'" (click)="changeActive('service')">Our
+            Serives</a>
+        <a routerLink="" class="nav-item" [class.active]="isActive == 'about'" (click)="changeActive('about')">About
+            Us</a>
+        <a routerLink="" class="nav-item" [class.active]="isActive == 'contact'"
+            (click)="changeActive('contact')">Contact Us</a>
+    </div>
+    <div class="login">
+        <a routerLink="" class="nav-item toggle">Log In</a>
+        <a routerLink="" class="nav-item">EN</a>
+        <img src="../../../../assets/images/bars.svg" alt="" class="bars filter-primary" (click)="showSidebar()">
+    </div>
+
+    <div class="side-bar " [class.hidden]='isHidden'>
+        <a routerLink="" class="side-item">Home</a>
+        <a routerLink="" class="side-item">Our Serives</a>
+        <a routerLink="" class="side-item">About Us</a>
+        <a routerLink="" class="side-item">Contact Us</a>
+        <a routerLink="auth/login" class="side-item">Log In</a>
+    </div>
+
+</div>

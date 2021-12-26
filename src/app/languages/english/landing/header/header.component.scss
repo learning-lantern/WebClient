@@ -1,0 +1,97 @@
+.container {
+  background-color: white;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 3px solid var(--primary-color);
+  z-index: 999;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  transition: 0.3s ease all;
+  padding: 0.7em 1em;
+}
+
+.nav-item:hover {
+  color: var(--accent-color);
+}
+
+.active {
+  background: var(--gradient-back);
+  color: white;
+  border-radius: 999px;
+}
+
+.active:hover {
+  color: white;
+}
+
+.bars {
+  width: 50px;
+  padding: 0.25em;
+  margin-left: 0.5rem;
+}
+
+.bars:hover {
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+.toggle {
+  display: none;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.side-bar {
+  z-index: 999;
+  position: absolute;
+  top: 80px;
+  background: var(--gradient-back);
+  width: 100%;
+  height: calc(100vh - 80px);
+  text-align: center;
+  clip-path: ellipse(100% 1000% at 0% 0%);
+  transition: 0.3s all ease;
+}
+.side-item {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+}
+.hidden {
+  clip-path: ellipse(0px 0px at 0% 0%);
+}
+.side-item:hover {
+  border: 1px solid white;
+}
+@media all and (min-width: 900px) {
+  .bars {
+    display: none;
+  }
+
+  .toggle {
+    display: initial;
+  }
+  .side-bar {
+    display: none;
+  }
+}

@@ -1,0 +1,6 @@
+<input #taskTitel type="text" placeholder="Enter your task title">
+<br>
+<textarea #taskDes placeholder="Task Description"></textarea>
+<br>
+<button (click)="SaveTask('taskTitel','taskDes')">Save Task</button> 
+<button><a routerLink="/en/td">Cancel</a></button>

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
+//this is to try the hard mergegit reset --hard upstream/branch1
+
 
 @NgModule({
   declarations: [

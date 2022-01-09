@@ -1,43 +1,46 @@
-<div class="container">
+<form [formGroup]="registerationForm" class="container" (ngSubmit)="onSubmit()">
     <div class="form-select">
         <label for="userUniversity">University:</label>
-        <select name="userUniversity" id="userUniversity">
+        <select name="userUniversity" id="userUniversity" formControlName="userUniversity">
             <option *ngFor="let university of universitiesList" value={{university.id}}>{{university.name}}</option>
         </select>
     </div>
     <div class="form-field">
         <label for="fName">First Name: </label>
-        <input type="text" name="fName" id="fName" class="form-input">
+        <input formControlName="fName" type="text" name="fName" id="fName" class="form-input">
     </div>
     <div class="form-field">
         <label for="fName">Middle Name: </label>
-        <input type="text" name="mName" id="mName" class="form-input">
+        <input formControlName="mName" type="text" name="mName" id="mName" class="form-input">
     </div>
     <div class="form-field">
         <label for="fName">Last Name: </label>
-        <input type="text" name="lName" id="lName" class="form-input">
+        <input formControlName="lName" type="text" name="lName" id="lName" class="form-input">
     </div>
     <div class="form-field">
         <label for="userEmail">Email: </label>
-        <input type="text" name="userEmail" id="userEmail" class="form-input">
+        <input formControlName="userEmail" type="text" name="userEmail" id="userEmail" class="form-input">
     </div>
     <div class="form-field">
         <label for="userPassword">Password: </label>
-        <input type="password" name="userPassword" id="userPassword" class="form-input">
+        <input formControlName="userPassword" type="password" name="userPassword" id="userPassword" class="form-input">
     </div>
     <div class="form-field">
         <label for="userPassword">Confirm Password: </label>
-        <input type="password" name="confirmPassword" id="confirmPassword" class="form-input">
+        <input formControlName="confirmPassword" type="password" name="confirmPassword" id="confirmPassword"
+            class="form-input">
     </div>
 
     <div class="form-check">
-        <input type="checkbox" name="iAgree" id="iAgree">
+        <input formControlName="iAgree" type="checkbox" name="iAgree" id="iAgree">
         <label for="iAgree">I Agree on Terms And Conditions</label>
     </div>
     <div class="form-submit-btn">
-        <button>Sign Up</button>
+        <button type="submit">Sign Up</button>
     </div>
     <div class="form-footer">
         <a>Terms And Conditions</a>
+        <a>status is :{{registerationForm.status}}</a>
     </div>
-</div>
+
+</form>

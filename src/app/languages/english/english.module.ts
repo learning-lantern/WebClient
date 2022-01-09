@@ -10,6 +10,7 @@ import { FooterComponent } from './landing/footer/footer.component';
 import { FormContainerComponent } from './auth/form-container/form-container.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SignupFormComponent } from './auth/signup-form/signup-form.component';
   ],
   imports: [
     CommonModule,
-    EnglishRoutingModule
+    EnglishRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class EnglishModule { }

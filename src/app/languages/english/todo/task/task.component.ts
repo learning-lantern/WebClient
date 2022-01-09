@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TasksService } from '../../services/tasks.service';
+import { TasksService } from "src/app/tasks.service";
 
 @Component({
   selector: 'app-task',
@@ -9,21 +9,22 @@ import { TasksService } from '../../services/tasks.service';
 })
 export class TaskComponent implements OnInit {
 
-    taskID:any;
-    task:any;
-  constructor(public tasksServ:TasksService,
-    private route:ActivatedRoute,
-    private router:Router ) { }
+  taskID: any;
+  task: any;
+  constructor(public tasksServ: TasksService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
-    this.taskID=this.route.snapshot.paramMap.get('id')
-   this.task=this.tasksServ.tasks[this.taskID]
+    this.taskID = this.route.snapshot.paramMap.get('id')
+    console.log(this.taskID)
+    this.task = this.tasksServ.tasksList[this.taskID]
   }
-  UpdateTask(){
-  this.tasksServ.UpdateTask(this.taskID,this.task)
-  this.router.navigate(['/en/td'])
+  UpdateTask() {
+    // this.tasksServ.UpdateTask(this.taskID, this.task)
+    this.router.navigate(['/en/td'])
   }
-  deleteTask(){
+  deleteTask() {
     this.tasksServ.deleteTask(this.taskID)
     this.router.navigate(['/en/td'])
   }

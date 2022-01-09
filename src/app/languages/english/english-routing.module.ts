@@ -35,13 +35,12 @@ const routes: Routes = [
   }
   ,
   {
-    path: 'td', component: HomeComponent,
-    children: [
-      { path: 'task', component: TaskComponent },
-      { path: 'task/:id', component: TaskComponent },
-    ]
+    path: 'td', component: HomeComponent
   },
-  { path: 'add-task', component: AddTaskComponent },
+  { path: 'td/task', component: TaskComponent },
+  { path: 'td/task/:id', component: TaskComponent },
+
+  { path: 'td/add-task', component: AddTaskComponent },
   { path: 'not-found', component: NotFoundComponent }
 
 ];

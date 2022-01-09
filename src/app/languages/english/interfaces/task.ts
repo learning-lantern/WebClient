@@ -1,4 +1,4 @@
 export interface Task {
-    title:string,
-    description:string
+    title: string,
+    discription: string
 }

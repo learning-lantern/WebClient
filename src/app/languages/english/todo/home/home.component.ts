@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TasksService } from '../../services/tasks.service';
+import { TasksService } from "src/app/tasks.service";
 
 @Component({
   selector: 'app-home',
@@ -8,14 +8,14 @@ import { TasksService } from '../../services/tasks.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public tasksser:TasksService) { }
+  constructor(public tasksser: TasksService) { }
 
   ngOnInit() {
   }
 
-  deleteTask(i:number){
-    this.tasksser.deleteTask(i)
 
+  deleteTask(i: number) {
+    this.tasksser.deleteTask(i)
   }
 
 }

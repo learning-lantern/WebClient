@@ -2,12 +2,13 @@
 @import url(./assets/fonts/cairo/cairo.css);
 @import url(./assets/fonts/roboto/roboto.css);
 :root {
-  --primary-color:#09052b;
-  --accent-color:#05011d99;
-  --gradient-back: linear-gradient(140deg,#09052b,#05011d99);
-  // --primary-color: #003a3e;
-  // --accent-color: #00868f;
-  // --gradient-back: linear-gradient(140deg, #003a3e, #00868f);
+  // --primary-color:#09052b;
+  // --accent-color:#05011d99;
+  // --gradient-back: linear-gradient(140deg,#09052b,#05011d99)
+  --primary-color: #232b55bf;
+  // --accent-color: #232b55f2;
+  --accent-color: rgba(16, 89, 255, 1);
+  --gradient-back: linear-gradient(#232b55bf, #232b55f2);
 }
 
 *,
@@ -26,6 +27,7 @@
 body {
   font-family: "roboto", sans-serif;
   position: relative;
+  min-width: 400px;
 }
 
 .logo {
@@ -51,8 +53,8 @@ body {
 }
 
 .filter-primary {
-  filter: invert(12%) sepia(94%) saturate(1809%) hue-rotate(162deg)
-    brightness(95%) contrast(101%);
+  filter: invert(14%) sepia(9%) saturate(7293%) hue-rotate(205deg)
+    brightness(96%) contrast(91%);
 }
 
 .filter-accent {
@@ -63,4 +65,105 @@ body {
 
 .icon50 {
   width: 50px;
+}
+
+// form styles
+
+.form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.7rem 0rem;
+}
+
+.form-input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  color: white;
+  border-radius: 4444px;
+}
+.form-field label,
+.form-select label {
+  margin: 0.5rem 1rem;
+}
+
+.form-check {
+  width: 100%;
+  display: flex;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.7rem 0rem;
+}
+
+.form-check input {
+  margin: 0rem 0.5rem;
+}
+
+.form-submit-btn {
+  margin: 0.7rem 0rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-submit-btn button {
+  color: white;
+  background: var(--accent-color);
+  padding: 0.7em 1.5em;
+  border: none;
+  border-radius: 4444px;
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.form-submit-btn button:hover {
+  opacity: 0.85;
+}
+
+.form-footer {
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-footer a {
+  opacity: 0.5;
+  // cursor: pointer;
+}
+
+.form-footer a:hover {
+  opacity: 1;
+}
+
+.form-select {
+  width: 100%;
+  margin: 0.7rem 0rem;
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-select select {
+  border: none;
+  border-radius: 44444px;
+  font-size: 1.2rem;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.form-fieldset {
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }

@@ -16,14 +16,10 @@ const routes: Routes = [
     component: LandingContainerComponent
   },
   {
-    path: "auth",
-    component: FormContainerComponent,
+    path: "auth",component: FormContainerComponent,
     children: [
       {
-        path: "login",
-        component: LoginFormComponent,
-        pathMatch: "full",
-        data: { name: "login" }
+        path: "login",component: LoginFormComponent, pathMatch: "full",data: { name: "login" }
       },
       {
         path: "signup",
@@ -34,12 +30,9 @@ const routes: Routes = [
     ]
   }
   ,
-  {
-    path: 'td', component: HomeComponent
-  },
+  {path: 'td', component: HomeComponent },
   { path: 'td/task', component: TaskComponent },
   { path: 'td/task/:id', component: TaskComponent },
-
   { path: 'td/add-task', component: AddTaskComponent },
   { path: 'not-found', component: NotFoundComponent }
 

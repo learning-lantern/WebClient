@@ -17,11 +17,10 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskID = this.route.snapshot.paramMap.get('id')
-    console.log(this.taskID)
     this.task = this.tasksServ.tasksList[this.taskID]
   }
   UpdateTask() {
-    // this.tasksServ.UpdateTask(this.taskID, this.task)
+    this.tasksServ.UpdateTask(this.taskID, this.task)
     this.router.navigate(['/en/td'])
   }
   deleteTask() {

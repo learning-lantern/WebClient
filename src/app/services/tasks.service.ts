@@ -8,11 +8,14 @@ export class TasksService {
   constructor() { }
   saveTask(title: string, discription: string) {
     this.tasksList.push({
-      title,
-      discription
+      title:title,
+      discription:discription
     })
   };
   deleteTask(index: number) {
     this.tasksList.splice(index, 1)
+  };
+  UpdateTask(i:string,data:string){
+      
   };
 }

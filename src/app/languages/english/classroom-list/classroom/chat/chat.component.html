@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="messageContainer">
+        <ng-container *ngFor="let msg of messageHistory;let i = index">
+            <p class="msg" [class.right]="i==0">{{msg}}</p>
+        </ng-container>
+    </div>
+    <form class="sendMessage">
+        <textarea #userMessage name="userMessage" id="userMessage" rows="1"
+            (keydown.enter)="sendMessage($event)"></textarea>
+        <input type="submit" value="send" (click)="sendMessage($event)">
+    </form>
+</div>

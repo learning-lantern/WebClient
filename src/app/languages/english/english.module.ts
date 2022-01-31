@@ -16,6 +16,7 @@ import { HomeComponent } from './todo/home/home.component';
 import { AddTaskComponent } from './todo/add-task/add-task.component';
 import { TaskComponent } from './todo/task/task.component';
 import { NotFoundComponent } from './todo/not-found/not-found.component';
+import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
 
 
 
@@ -32,7 +33,8 @@ import { NotFoundComponent } from './todo/not-found/not-found.component';
     HomeComponent,
     AddTaskComponent,
     TaskComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ChatComponent
 
   ],
   imports: [

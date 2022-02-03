@@ -7,6 +7,7 @@ export class TasksService {
   tasksList: Task[] = []
   constructor() { }
   saveTask(title: string, discription: string) {
+    console.log(title,discription)
     this.tasksList.push({
       title,
       discription

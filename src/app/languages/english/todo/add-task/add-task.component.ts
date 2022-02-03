@@ -17,6 +17,7 @@ export class AddTaskComponent implements OnInit {
   }
 
   SaveTask(title: any, des: any) {
+    // console.log(title.value,des.value)
     this.tasksServ.saveTask(title.value, des.value)
     this.router.navigate(['/en/td'])
   }

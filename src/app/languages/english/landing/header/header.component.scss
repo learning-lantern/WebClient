@@ -1,28 +1,25 @@
 .container {
-  background-color: white;
+  background-color: #DDFDD8;
   display: flex;
   position: sticky;
   top: 0px;
-  align-items: center;
   justify-content: space-between;
   height: 80px;
-  border-bottom: 3px solid var(--green);
+  border-bottom: 0.5px  solid var(--green);
   z-index: 999;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav-links{
+  margin-bottom: 0.3rem;
 }
-
 .nav-item {
   text-decoration: none;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-right: 0.5rem;
   transition: 0.3s ease all;
   padding: 0.7em 1em;
+  font-weight: bold;
 }
 
 .nav-item:hover {
@@ -39,6 +36,7 @@
 }
 
 .bars {
+  display: flex;
   width: 50px;
   padding: 0.25em;
   margin-left: 0.5rem;
@@ -57,6 +55,16 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.log-icon{
+  width: 27px;
+  height: 29px;
+  margin: 0 -0.875rem 0 0.75rem;
+}
+.lang-icon{
+  width: 36px;
+  height: 44px;
+  margin: 0 0.5rem 0 -1.25rem;
 }
 .side-bar {
   z-index: 999;

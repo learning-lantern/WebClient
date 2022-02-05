@@ -53,6 +53,7 @@ body {
 .filter-primary {
   filter: invert(14%) sepia(9%) saturate(7293%) hue-rotate(205deg)
     brightness(96%) contrast(91%);
+  min-height: 80vh;
 }
 
 .filter-accent {
@@ -66,102 +67,98 @@ body {
 }
 
 // form styles
-
-.form-field {
+.form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0.7rem 0rem;
 }
 
-.form-input {
-  width: 100%;
-  font-size: 1.2rem;
+form * {
+  font-size: 1.1rem;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form select,
+.form input {
+  background: white;
   padding: 0.5em;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: none;
-  color: white;
-  border-radius: 4444px;
-}
-.form-field label,
-.form-select label {
-  margin: 0.5rem 1rem;
+  border: 1px solid var(--light-green);
+  border-radius: 8px;
 }
 
-.form-check {
-  width: 100%;
+.form label {
+  margin-bottom: 0.3rem;
+}
+
+.form-submit {
   display: flex;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0.7rem 0rem;
-}
-
-.form-check input {
-  margin: 0rem 0.5rem;
-}
-
-.form-submit-btn {
-  margin: 0.7rem 0rem;
-  width: 100%;
-  display: flex;
+  align-items: center;
   justify-content: center;
 }
-
-.form-submit-btn button {
-  color: white;
-  background: var(--light-green);
-  padding: 0.7em 1.5em;
-  border: none;
-  border-radius: 4444px;
-  width: 100%;
-  font-size: 1.2rem;
+// buttons styles
+.btn {
   cursor: pointer;
 }
-
-.form-submit-btn button:hover {
-  opacity: 0.85;
+.pill-btn {
+  border-radius: 999px;
+}
+.btn-primary {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5em 3em;
+  display: inline-block;
+  color: white;
+  border: 1px solid var(--green);
+  background: var(--green);
+  margin: 1rem 0rem;
 }
 
-.form-footer {
-  color: rgba(255, 255, 255, 0.8);
+.btn-primary:hover {
+  color: black;
+  border: 1px solid black;
+}
+
+.form-iAgree {
+  display: flex;
   width: 100%;
-  margin: 1.5rem 0 0 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.8);
-  padding: 1em;
+}
+.remember {
+  display: flex;
+  padding: 0.5em 0em;
+  align-items: center;
+}
+
+form a {
+  color: var(--brown);
+  padding: 0.5em 0em;
+}
+
+.forget:hover {
+  color: black;
+}
+
+.login-photo {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.form-footer a {
-  opacity: 0.5;
-  // cursor: pointer;
-}
-
-.form-footer a:hover {
-  opacity: 1;
-}
-
-.form-select {
   width: 100%;
-  margin: 0.7rem 0rem;
-  display: flex;
-  flex-direction: column;
-  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: -5rem;
 }
 
-.form-select select {
-  border: none;
-  border-radius: 44444px;
-  font-size: 1.2rem;
-  padding: 0.5em;
-  background: rgba(255, 255, 255, 0.4);
+.login-photo img {
+  position: relative;
+  max-width: 170px;
+  transform: translateY(-100px);
 }
 
-.form-fieldset {
-  color: rgba(255, 255, 255, 0.8);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.signup-here {
+  // color: var(--green);
+  margin: 1rem auto 0rem;
+}
+
+.signup-here:hover {
+  color: black;
 }

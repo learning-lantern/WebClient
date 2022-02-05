@@ -11,6 +11,9 @@ import { HomeComponent } from './todo/home/home.component';
 import { AddTaskComponent } from './todo/add-task/add-task.component';
 import { TaskComponent } from './todo/task/task.component';
 import { NotFoundComponent } from './todo/not-found/not-found.component';
+import { FormContainerComponent } from './auth/form-container/form-container.component';
+import { LoginFormComponent } from './auth/login-form/login-form.component';
+import { SignupFormComponent } from './auth/signup-form/signup-form.component';
 
 
 
@@ -24,7 +27,10 @@ import { NotFoundComponent } from './todo/not-found/not-found.component';
     HomeComponent,
     AddTaskComponent,
     TaskComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FormContainerComponent,
+    LoginFormComponent,
+    SignupFormComponent
   ],
   imports: [
     CommonModule,

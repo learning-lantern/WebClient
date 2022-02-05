@@ -10,7 +10,7 @@
 }
 
 .message h1 {
-  color: #0E6016;
+  color: #0e6016;
   line-height: 1.5em;
   margin-bottom: 1.5rem;
 }
@@ -93,7 +93,7 @@
 }
 
 .read_more {
-  color: #1CAB04;
+  color: #1cab04;
   align-self: flex-end;
   text-decoration: none;
   font-style: small;
@@ -105,7 +105,7 @@
 .contact-us {
   display: flex;
   justify-content: center;
-  margin-top:2rem;
+  margin-top: 2rem;
 }
 
 .contact-us img {
@@ -115,13 +115,12 @@
 
 .contant {
   position: absolute;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0.65rem 0 0 1rem;
 }
 
 .contact-us-form {
   position: absolute;
-
 }
 
 .contact-form {
@@ -152,31 +151,38 @@ label {
   border-radius: 10px;
   padding: 0.25em;
   font-size: 1.4rem;
-  background-color: #DDFDD8;
+  background-color: #ddfdd8;
   margin-right: 30px;
 }
 
 .contact-form button {
   width: 75px;
   height: 35px;
-  background-color: #0E6016;
+  background-color: #0e6016;
   color: white;
   border-radius: 20px;
   font-weight: bold;
   margin-top: 9px;
 }
-.contact-form button:hover{
+.contact-form button:hover {
   cursor: pointer;
 }
-.person img{
+.person img {
   width: 170px;
   height: 280px;
 }
-.person{
+.person {
   position: absolute;
   right: 22.3rem;
   bottom: 3.75rem;
 }
+
+.waves img {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-200px);
+}
+
 @media all and (min-width: 900px) {
   .welcome {
     flex-direction: row;

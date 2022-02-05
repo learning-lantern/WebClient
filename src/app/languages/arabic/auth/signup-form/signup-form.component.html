@@ -1,0 +1,52 @@
+<form action="" class="form">
+  <div class="login-photo">
+    <img src="../../../../../assets/images/reg.png" alt="login" />
+  </div>
+  <div class="form-control">
+    <label for="userUniversiyt">الجامعة: </label>
+    <select name="userUniversity" id="userUniversity">
+      <option value="a"></option>
+      <option value="0">Assuit University</option>
+      <option value="1">EELU University</option>
+    </select>
+  </div>
+  <div class="form-control">
+    <label for="userFName">الاسم: </label>
+    <input type="text" name="userFName" id="userFName" />
+  </div>
+  <div class="form-control">
+    <label for="userMName">اسم الأب: </label>
+    <input type="text" name="userMName" id="userMName" />
+  </div>
+  <div class="form-control">
+    <label for="userLName">اسم الجد: </label>
+    <input type="text" name="userLName" id="userLName" />
+  </div>
+  <div class="form-control">
+    <label for="userEmail">البريد الالكتروني: </label>
+    <input type="email" name="userEmail" id="userEmail" />
+  </div>
+  <div class="form-control">
+    <label for="userPassword">كلمة المرور: </label>
+    <input type="password" name="userPassword" id="userPassword" />
+  </div>
+  <div class="form-control">
+    <label for="confirmPassword">تأكيد كلمة المرور: </label>
+    <input type="password" name="confirmPassword" id="confirmPassword" />
+  </div>
+  <div class="form-iAgree">
+    <div class="remember">
+      <input type="checkbox" name="rememberMe" id="rememberMe" />
+      <label for="rememberMe"
+        >أوافق <a routerLink="#">شروط الاستخدام.</a></label
+      >
+    </div>
+  </div>
+  <div class="form-submit">
+    <button type="submit" class="btn pill-btn btn-primary">انشاء الحساب</button>
+  </div>
+  <hr />
+  <a routerLink="../login" class="signup-here"
+    >لديك حساب بالفعل؟ قم بتسجيل الدخول الآن</a
+  >
+</form>

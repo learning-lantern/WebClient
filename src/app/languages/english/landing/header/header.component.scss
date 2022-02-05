@@ -74,13 +74,13 @@
   width: 100%;
   padding: 1em;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .hidden {
   clip-path: ellipse(0px 0px at 0% 0%);
 }
 .side-item:hover {
-  border: 1px solid white;
+  border: 1px solid black;
 }
 @media all and (min-width: 900px) {
   .bars {

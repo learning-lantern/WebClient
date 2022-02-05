@@ -1,46 +1,97 @@
-<form [formGroup]="registerationForm" class="container" (ngSubmit)="onSubmit()">
-    <div class="form-select">
-        <label for="userUniversity">University:</label>
-        <select name="userUniversity" id="userUniversity" formControlName="userUniversity">
-            <option *ngFor="let university of universitiesList" value={{university.id}}>{{university.name}}</option>
-        </select>
+<form action="" class="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <div class="login-photo">
+    <img src="../../../../../assets/images/reg.png" alt="login" />
+  </div>
+  <div class="form-control">
+    <label for="userUniversiyt">University: </label>
+    <select
+      name="userUniversity"
+      id="userUniversity"
+      formControlName="userUniversity"
+    >
+      <option value="0">Assuit University</option>
+      <option value="1">EELU University</option>
+    </select>
+  </div>
+  <div class="form-control">
+    <label for="userFName">First Name: </label>
+    <input
+      type="text"
+      name="userFName"
+      id="userFName"
+      formControlName="userFName"
+    />
+  </div>
+  <div class="form-control">
+    <label for="userMName">Middle Name: </label>
+    <input
+      type="text"
+      name="userMName"
+      id="userMName"
+      formControlName="userMName"
+    />
+  </div>
+  <div class="form-control">
+    <label for="userLName">Last Name: </label>
+    <input
+      type="text"
+      name="userLName"
+      id="userLName"
+      formControlName="userLName"
+    />
+  </div>
+  <div class="form-control">
+    <label for="userEmail">Email: </label>
+    <input
+      type="email"
+      name="userEmail"
+      id="userEmail"
+      formControlName="userEmail"
+    />
+  </div>
+  <div class="form-control">
+    <label for="userPassword">Password: </label>
+    <input
+      type="password"
+      name="userPassword"
+      id="userPassword"
+      formControlName="userPassword"
+    />
+  </div>
+  <div class="form-control">
+    <label for="confirmPassword">Confrim Password: </label>
+    <input
+      type="password"
+      name="confirmPassword"
+      id="confirmPassword"
+      formControlName="confirmPassword"
+    />
+  </div>
+  <div class="form-iAgree">
+    <div class="remember">
+      <input
+        type="checkbox"
+        name="rememberMe"
+        id="rememberMe"
+        formControlName="iAgree"
+      />
+      <label for="rememberMe"
+        >I Agree on <a routerLink="#">Terms&Conditions</a></label
+      >
     </div>
-    <div class="form-field">
-        <label for="fName">First Name: </label>
-        <input formControlName="fName" type="text" name="fName" id="fName" class="form-input">
-    </div>
-    <div class="form-field">
-        <label for="fName">Middle Name: </label>
-        <input formControlName="mName" type="text" name="mName" id="mName" class="form-input">
-    </div>
-    <div class="form-field">
-        <label for="fName">Last Name: </label>
-        <input formControlName="lName" type="text" name="lName" id="lName" class="form-input">
-    </div>
-    <div class="form-field">
-        <label for="userEmail">Email: </label>
-        <input formControlName="userEmail" type="text" name="userEmail" id="userEmail" class="form-input">
-    </div>
-    <div class="form-field">
-        <label for="userPassword">Password: </label>
-        <input formControlName="userPassword" type="password" name="userPassword" id="userPassword" class="form-input">
-    </div>
-    <div class="form-field">
-        <label for="userPassword">Confirm Password: </label>
-        <input formControlName="confirmPassword" type="password" name="confirmPassword" id="confirmPassword"
-            class="form-input">
-    </div>
-
-    <div class="form-check">
-        <input formControlName="iAgree" type="checkbox" name="iAgree" id="iAgree">
-        <label for="iAgree">I Agree on Terms And Conditions</label>
-    </div>
-    <div class="form-submit-btn">
-        <button type="submit">Sign Up</button>
-    </div>
-    <div class="form-footer">
-        <a>Terms And Conditions</a>
-        <a>status is :{{registerationForm.status}}</a>
-    </div>
-
+  </div>
+  <div class="form-submit">
+    <button
+      type="submit"
+      class="btn pill-btn btn-primary"
+      [disabled]="signupForm.invalid"
+    >
+      Sign Up
+    </button>
+  </div>
+  <hr />
+  <a routerLink="../login" class="signup-here"
+    >Already have an account? Login here</a
+  >
+  {{ signupForm.status }}
 </form>

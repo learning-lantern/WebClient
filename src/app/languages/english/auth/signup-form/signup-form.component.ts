@@ -1,39 +1,80 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { UserUniversity } from "src/app/interfaces/user-university";
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserUniversity } from 'src/app/interfaces/user-university';
 
 @Component({
   selector: 'app-signup-form',
   templateUrl: './signup-form.component.html',
-  styleUrls: ['./signup-form.component.scss']
+  styleUrls: ['./signup-form.component.scss'],
 })
 export class SignupFormComponent implements OnInit {
   universitiesList: UserUniversity[] = [
     {
-      id: "0",
-      name: "Assuit University"
+      id: '0',
+      name: 'Assuit University',
     },
     {
-      id: "1",
-      name: "EELU University"
+      id: '1',
+      name: 'EELU University',
     },
-  ]
-  constructor() { }
-  registerationForm = new FormGroup({
-    userUniversity: new FormControl(null, Validators.required),
-    fName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
-    mName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
-    lName: new FormControl(null, [Validators.required, Validators.minLength(3)]),
-    userEmail: new FormControl(null, [Validators.required, Validators.email]),
-    userPassword: new FormControl(null, Validators.pattern("^(?=.*[A-Z].*[a-z])(?=.*[!@#$&*])(?=.*[0-9]).{8,30}$")),
-    confirmPassword: new FormControl(null, Validators.pattern("^(?=.*[A-Z].*[a-z])(?=.*[!@#$&*])(?=.*[0-9]).{8,30}$")),
-    iAgree: new FormControl(null, Validators.requiredTrue),
-  })
-  ngOnInit(): void {
+  ];
+  signupForm!: FormGroup;
+  userUniversity!: FormControl;
+  userFName!: FormControl;
+  userMName!: FormControl;
+  userLName!: FormControl;
+  userEmail!: FormControl;
+  userPassword!: FormControl;
+  confrimPassword!: FormControl;
+  iAgree!: FormControl;
+  constructor() {
+    this.initFormControls();
+    this.createForm();
+  }
+  ngOnInit(): void {}
+  initFormControls() {
+    this.userUniversity = new FormControl('', [Validators.required]);
+    this.userFName = new FormControl('', [
+      Validators.required,
+      Validators.minLength(2),
+    ]);
+    this.userMName = new FormControl('', [
+      Validators.required,
+      Validators.minLength(2),
+    ]);
+    this.userLName = new FormControl('', [
+      Validators.required,
+      Validators.minLength(2),
+    ]);
+    this.userEmail = new FormControl('', [
+      Validators.required,
+      Validators.email,
+    ]);
+    this.userPassword = new FormControl('', [
+      Validators.required,
+      Validators.pattern('^(?=.*[A-Z].*[a-z])(?=.*[0-9]).{8,30}$'),
+    ]);
+    this.confrimPassword = new FormControl('', [
+      Validators.required,
+      Validators.pattern('^(?=.*[A-Z].*[a-z])(?=.*[0-9]).{8,30}$'),
+    ]);
+    this.iAgree = new FormControl(false, [Validators.requiredTrue]);
+  }
+
+  createForm() {
+    this.signupForm = new FormGroup({
+      userUniversity: this.userUniversity,
+      userFName: this.userFName,
+      userMName: this.userMName,
+      userLName: this.userLName,
+      userEmail: this.userEmail,
+      userPassword: this.userPassword,
+      confirmPassword: this.confrimPassword,
+      iAgree: this.iAgree,
+    });
   }
   onSubmit() {
-    console.log(this.registerationForm.value)
-    console.log(this.registerationForm.valid)
-
+    console.log(this.signupForm.valid);
+    console.log(this.signupForm.value);
   }
 }

@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isActive = "home"
+  isActive = "home";
+  isHidden = true;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +16,10 @@ export class HeaderComponent implements OnInit {
   changeActive(str: string) {
     this.isActive = str;
   }
+  showSidebar() {
+    this.isHidden = !this.isHidden;
+  }
 
 }
+
 

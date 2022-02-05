@@ -1,4 +1,4 @@
-export interface Task {
-    title: string,
-    discription: string
+export interface TaskInterface {
+  title: string;
+  discription: string;
 }

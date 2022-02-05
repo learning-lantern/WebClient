@@ -2,13 +2,11 @@
 @import url(./assets/fonts/cairo/cairo.css);
 @import url(./assets/fonts/roboto/roboto.css);
 :root {
-  // --primary-color:#09052b;
-  // --accent-color:#05011d99;
-  // --gradient-back: linear-gradient(140deg,#09052b,#05011d99)
-  --primary-color: #232b55bf;
-  // --accent-color: #232b55f2;
-  --accent-color: rgba(16, 89, 255, 1);
-  --gradient-back: linear-gradient(#232b55bf, #232b55f2);
+  --green: #0e6016;
+  --light-green: #1cab04;
+  --very-light-green: #dafdd4;
+  --brown: #9f0000;
+  --light-brown: #f3bb7d;
 }
 
 *,
@@ -111,7 +109,7 @@ body {
 
 .form-submit-btn button {
   color: white;
-  background: var(--accent-color);
+  background: var(--light-green);
   padding: 0.7em 1.5em;
   border: none;
   border-radius: 4444px;

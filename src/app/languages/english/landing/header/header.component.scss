@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--green);
   z-index: 999;
 }
 
@@ -18,7 +18,7 @@
 
 .nav-item {
   text-decoration: none;
-  color: var(--primary-color);
+  color: black;
   font-size: 1.2rem;
   margin-right: 0.5rem;
   transition: 0.3s ease all;
@@ -26,12 +26,11 @@
 }
 
 .nav-item:hover {
-  color: var(--accent-color);
+  color: var(--light-green);
 }
 
 .active {
-  background: var(--gradient-back);
-  color: white;
+  background: var(--light-brown);
   border-radius: 999px;
 }
 
@@ -46,7 +45,7 @@
 }
 
 .bars:hover {
-  border: 1px solid var(--accent-color);
+  border: 1px solid var(--light-green);
   border-radius: 5px;
 }
 
@@ -63,7 +62,7 @@
   z-index: 999;
   position: absolute;
   top: 80px;
-  background: var(--gradient-back);
+  background: var(--light-brown);
   width: 100%;
   height: calc(100vh - 80px);
   text-align: center;

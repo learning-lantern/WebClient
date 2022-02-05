@@ -40,39 +40,10 @@ color: white;
   display: flex;
   justify-content: center;
   width: 100%;
+ 
 }
 .social-icons img {
   margin-right: 1rem;
-}
-
-.contact {
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-
-  width: 100%;
-  align-items: center;
-
-  padding: 1em;
-  grid-area: con;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-}
-
-label {
-  align-self: left;
-}
-
-.contact-form input[type="text"],
-.contact-form textarea {
-  border-radius: 5px;
-  padding: 0.25em;
-  font-size: 1.4rem;
-  background-color: #bbb;
 }
 .copyright {
   grid-area: trade;
@@ -81,8 +52,7 @@ label {
   justify-content: space-between;
   align-items: center;
   padding: 0.3em;
-
-  flex-direction: column;
+  flex-direction:column;
 }
 span a,
 .copyright a {

@@ -1,0 +1,17 @@
+<div>
+  <button class="add" routerLink="./add-task"> Add New Task</button>
+</div>
+<div  *ngIf="tasksser.tasksList.length == 0">
+  <p>There Is No Tasks </p>
+</div>
+<div class="tasks" *ngIf="tasksser.tasksList.length != 0">
+  <ul>
+    <li *ngFor="let task of tasksser.tasksList; index as i">
+      <a [routerLink]="['./task',i]">
+        {{task.title}}
+      </a>
+      <button class="delete" (click)="deleteTask(i)">Delete Task</button>
+    </li>
+  </ul>
+  <br>
+</div> 

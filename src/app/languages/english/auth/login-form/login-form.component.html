@@ -1,0 +1,65 @@
+<form action="" class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="form-photo">
+    <img src="../../../../../assets/images/login_photo.svg" alt="login" />
+  </div>
+  <div class="form-control">
+    <label for="userUniversiyt">University: </label>
+    <select
+      name="userUniversity"
+      id="userUniversity"
+      formControlName="userUniversity"
+    >
+      <option value="0">Assuit University</option>
+      <option value="1">EELU University</option>
+    </select>
+    <ng-container *ngIf="userUniversity.touched">
+      <small *ngIf="userUniversity.errors?.required"
+        >This Field is Required</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userEmail">Email: </label>
+    <input
+      type="text"
+      name="userEmail"
+      id="userEmail"
+      formControlName="userEmail"
+    />
+    <ng-container *ngIf="userEmail.touched && userEmail.dirty">
+      <small *ngIf="userEmail.errors?.required">This Field is Required</small>
+      <small *ngIf="userEmail.errors?.email">Please enter a valid email</small>
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userPassword">Password: </label>
+    <input
+      type="password"
+      name="userPassword"
+      id="userPassword"
+      formControlName="userPassword"
+    />
+    <ng-container *ngIf="userPassword.touched && userPassword.dirty">
+      <small *ngIf="userPassword.errors?.required"
+        >This Field is Required</small
+      >
+      <small *ngIf="userPassword.errors?.pattern"
+        >Password is 8 to 30 long and should contain characters & numbers</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-check">
+    <div>
+      <input type="checkbox" name="rememberMe" id="rememberMe" />
+      <label for="rememberMe"> Remember Me.</label>
+    </div>
+    <a routerLink="#">Forget Password?</a>
+  </div>
+  <div class="form-submit">
+    <button type="submit" class="btn pill-btn btn-primary">Log In</button>
+  </div>
+  <hr />
+  <a routerLink="../signup" style="margin: 1rem auto 0rem"
+    >Don't have an account? Signup here</a
+  >
+</form>

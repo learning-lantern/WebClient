@@ -1,0 +1,145 @@
+<form action="" class="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <div class="form-photo">
+    <img src="../../../../../assets/images/reg.png" alt="login" />
+  </div>
+  <div class="form-control">
+    <label for="userUniversiyt">University: </label>
+    <select
+      name="userUniversity"
+      id="userUniversity"
+      formControlName="userUniversity"
+    >
+      <option value="0">Assuit University</option>
+      <option value="1">EELU University</option>
+    </select>
+    <ng-container *ngIf="userUniversity.touched">
+      <small *ngIf="userUniversity.errors?.required"
+        >This Field is Required</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userFName">First Name: </label>
+    <input
+      type="text"
+      name="userFName"
+      id="userFName"
+      formControlName="userFName"
+    />
+    <ng-container *ngIf="userFName.touched && userFName.dirty">
+      <small *ngIf="userFName.errors?.required">This Field is Required</small>
+      <small *ngIf="userFName.errors?.minlength"
+        >Name must be 2 or more characters</small
+      >
+      <small *ngIf="userFName.errors?.invalidName"
+        >Name can't contain numbers</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userMName">Middle Name: </label>
+    <input
+      type="text"
+      name="userMName"
+      id="userMName"
+      formControlName="userMName"
+    />
+    <ng-container *ngIf="userMName.touched && userMName.dirty">
+      <small *ngIf="userMName.errors?.required">This Field is Required</small>
+      <small *ngIf="userMName.errors?.minlength"
+        >Name must be 2 or more characters</small
+      >
+      <small *ngIf="userMName.errors?.invalidName"
+        >Name can't contain numbers</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userLName">Last Name: </label>
+    <input
+      type="text"
+      name="userLName"
+      id="userLName"
+      formControlName="userLName"
+    />
+    <ng-container *ngIf="userLName.touched && userLName.dirty">
+      <small *ngIf="userLName.errors?.required">This Field is Required</small>
+      <small *ngIf="userLName.errors?.minlength"
+        >Name must be 2 or more characters</small
+      >
+      <small *ngIf="userLName.errors?.invalidName"
+        >Name can't contain numbers</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userEmail">Email: </label>
+    <input
+      type="email"
+      name="userEmail"
+      id="userEmail"
+      formControlName="userEmail"
+    />
+    <ng-container *ngIf="userEmail.touched && userEmail.dirty">
+      <small *ngIf="userEmail.errors?.required">This Field is Required</small>
+      <small *ngIf="userEmail.errors?.email">Please enter a valid email</small>
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userPassword">Password: </label>
+    <input
+      type="password"
+      name="userPassword"
+      id="userPassword"
+      formControlName="userPassword"
+    />
+    <ng-container *ngIf="userPassword.touched && userPassword.dirty">
+      <small *ngIf="userPassword.errors?.required"
+        >This Field is Required</small
+      >
+      <small *ngIf="userPassword.errors?.pattern"
+        >Password is 8 to 30 long and should contain characters & numbers</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="confirmPassword">Confrim Password: </label>
+    <input
+      type="password"
+      name="confirmPassword"
+      id="confirmPassword"
+      formControlName="confirmPassword"
+    />
+    <ng-container *ngIf="confirmPassword.touched && confirmPassword.dirty">
+      <small *ngIf="confirmPassword.errors?.required"
+        >This Field is Required</small
+      >
+      <small *ngIf="confirmPassword.errors?.notMatch"
+        >Confirm Password doesn't match the Password</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-check">
+    <div>
+      <input
+        type="checkbox"
+        name="rememberMe"
+        id="rememberMe"
+        formControlName="iAgree"
+      />
+      <label for="rememberMe">
+        I Agree on <a routerLink="#">Terms&Conditions</a></label
+      >
+      <p *ngIf="iAgree.invalid && iAgree.touched">
+        <small>Please Agree on our Terms&Condition</small>
+      </p>
+    </div>
+  </div>
+  <div class="form-submit">
+    <button type="submit" class="btn pill-btn btn-primary">Sign Up</button>
+  </div>
+  <hr />
+  <a routerLink="../login" style="margin: 1rem auto 0rem"
+    >Already have an account? Login here</a
+  >
+</form>

@@ -1,0 +1,146 @@
+<form
+  action=""
+  class="form arabic"
+  [formGroup]="signupForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="form-photo">
+    <img src="../../../../../assets/images/reg.png" alt="login" />
+  </div>
+  <div class="form-control">
+    <label for="userUniversiyt">الجامعة: </label>
+    <select
+      name="userUniversity"
+      id="userUniversity"
+      formControlName="userUniversity"
+    >
+      <option value="0">Assuit University</option>
+      <option value="1">EELU University</option>
+    </select>
+    <ng-container *ngIf="userUniversity.touched">
+      <small *ngIf="userUniversity.errors?.required">هذا الحقل مطلوب</small>
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userFName">الاسم: </label>
+    <input
+      type="text"
+      name="userFName"
+      id="userFName"
+      formControlName="userFName"
+    />
+    <ng-container *ngIf="userFName.touched && userFName.dirty">
+      <small *ngIf="userFName.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="userFName.errors?.minlength"
+        >يجب أن يحتوي الايم على حرفيت على الاقل</small
+      >
+      <small *ngIf="userFName.errors?.invalidName"
+        >الاسم لا يمكن أن يحتوي ارقاما</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userMName">اسم الأب: </label>
+    <input
+      type="text"
+      name="userMName"
+      id="userMName"
+      formControlName="userMName"
+    />
+    <ng-container *ngIf="userFName.touched && userFName.dirty">
+      <small *ngIf="userFName.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="userFName.errors?.minlength"
+        >يجب أن يحتوي الايم على حرفيت على الاقل</small
+      >
+      <small *ngIf="userFName.errors?.invalidName"
+        >الاسم لا يمكن أن يحتوي ارقاما</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userLName">اسم الجد: </label>
+    <input
+      type="text"
+      name="userLName"
+      id="userLName"
+      formControlName="userLName"
+    />
+    <ng-container *ngIf="userFName.touched && userFName.dirty">
+      <small *ngIf="userFName.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="userFName.errors?.minlength"
+        >يجب أن يحتوي الايم على حرفيت على الاقل</small
+      >
+      <small *ngIf="userFName.errors?.invalidName"
+        >الاسم لا يمكن أن يحتوي ارقاما</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userEmail">البريد الالكتروني: </label>
+    <input
+      type="email"
+      name="userEmail"
+      id="userEmail"
+      formControlName="userEmail"
+    />
+    <ng-container *ngIf="userEmail.touched && userEmail.dirty">
+      <small *ngIf="userEmail.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="userEmail.errors?.email"
+        >برجاء ادخال بريد الكتروني صحيح</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="userPassword">كلمة المرور: </label>
+    <input
+      type="password"
+      name="userPassword"
+      id="userPassword"
+      formControlName="userPassword"
+    />
+    <ng-container *ngIf="userPassword.touched && userPassword.dirty">
+      <small *ngIf="userPassword.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="userPassword.errors?.pattern"
+        >كلمة المرور طولها من 8 الى 30 ويجب أن تحتوي على حروف و أرقام</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-control">
+    <label for="confirmPassword">تأكيد كلمة المرور: </label>
+    <input
+      type="password"
+      name="confirmPassword"
+      id="confirmPassword"
+      formControlName="confirmPassword"
+    />
+    <ng-container *ngIf="confirmPassword.touched && confirmPassword.dirty">
+      <small *ngIf="confirmPassword.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="confirmPassword.errors?.notMatch"
+        >كلمة المرور وتأكيد كلمة المرور غير متطابقان</small
+      >
+    </ng-container>
+  </div>
+  <div class="form-check">
+    <div>
+      <input
+        type="checkbox"
+        name="rememberMe"
+        id="rememberMe"
+        formControlName="iAgree"
+      />
+      <label for="rememberMe">
+        أوافق علي <a routerLink="#">الشروط والأحكام.</a></label
+      >
+      <p *ngIf="iAgree.invalid && iAgree.touched">
+        <small>برجاء الموافقة على الشروط والاحكام</small>
+      </p>
+    </div>
+  </div>
+  <div class="form-submit">
+    <button type="submit" class="btn pill-btn btn-primary">انشاء الحساب</button>
+  </div>
+  <hr />
+  <a routerLink="../login" style="margin: 1rem auto 0rem"
+    >لديك حساب بالفعل؟ سجل الدخول من هنا.</a
+  >
+</form>

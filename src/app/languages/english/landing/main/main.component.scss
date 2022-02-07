@@ -12,6 +12,7 @@
   color: #0e6016;
   line-height: 1.5em;
   margin-bottom: 1.5rem;
+  padding: 0.7em 2em 0 1em;
 }
 
 .message p {
@@ -38,6 +39,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateY(40px);
 }
 
 .serv-grid {
@@ -52,11 +54,26 @@
   grid-auto-rows: 400px;
 }
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+}
+
 .serv-title {
   color: var(--green);
   border-bottom: 3px solid var(--green);
   padding: 0.5em;
-  margin-bottom: 5rem;
+  margin: 5rem 0 4rem 0;
+  animation-name: fadeInDown;
+  animation-duration: 5s;
 }
 
 .serv-item {
@@ -83,7 +100,6 @@
 }
 
 .serv-item p {
-  // font-size: 15px;
   margin-top: 17px;
 }
 
@@ -104,7 +120,7 @@
 .contact-us {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 7.8rem;
 }
 
 .contact-us img {
@@ -115,7 +131,7 @@
 .contant {
   position: absolute;
   color: #ffffff;
-  margin: 0.65rem 0 0 1rem;
+  margin: -0.5rem 0 0rem 1rem;
 }
 
 .contact-us-form {
@@ -125,7 +141,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  margin-top: 4.25rem;
+  margin-top: 3.25rem;
 }
 
 label {
@@ -163,26 +179,39 @@ label {
   font-weight: bold;
   margin-top: 9px;
 }
+
 .contact-form button:hover {
   cursor: pointer;
 }
+
 .person img {
   width: 170px;
   height: 280px;
 }
+
 .person {
   position: absolute;
-  left: 22.3rem;
+  left: 21.3rem;
   bottom: 3.75rem;
 }
+
 .waves img {
   width: 100%;
+
+  transform: translateY(-70px);
+  height: 55px;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+=======
+
 }
 
 @media all and (min-width: 900px) {
   .welcome {
     flex-direction: row;
-    padding: 2em 4em;
+    padding: 8em 4em 2em;
     align-items: center;
   }
 
@@ -193,6 +222,10 @@ label {
 
   .message p {
     font-size: 1.3rem;
+  }
+
+  .message h1 {
+    padding: 0.7em 0em 0 0em;
   }
 
   .serv-item img {
@@ -206,5 +239,12 @@ label {
 
   .toggle {
     display: initial;
+  }
+
+  .waves img {
+
+    position: absolute;
+    width: 100%;
+    transform: translateY(-80px);
   }
 }

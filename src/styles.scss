@@ -9,7 +9,9 @@
   --brown: #9f0000;
   --light-brown: #f3bb7d;
 }
+
 *,
+
 *::before,
 *::after {
   margin: 0;
@@ -32,6 +34,7 @@ body {
   width: 55px;
   margin-left: 0.5rem;
   cursor: pointer;
+
 }
 
 /*filters*/

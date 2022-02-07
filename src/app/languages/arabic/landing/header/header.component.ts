@@ -19,7 +19,16 @@ export class HeaderComponent implements OnInit {
   showSidebar() {
     this.isHidden = !this.isHidden;
   }
+  tohome(){
+    (<HTMLInputElement>document.getElementById("home")).scrollIntoView({behavior:"smooth"});
+  }
+  tocontact(){
+    (<HTMLInputElement>document.getElementById("contact")).scrollIntoView({behavior:"smooth"});
+  }
+  toservices(){
+    (<HTMLInputElement>document.getElementById("services")).scrollIntoView({behavior:"smooth"});
 
+  }
 }
 
 

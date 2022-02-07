@@ -63,11 +63,3 @@ span a,
   text-decoration: underline;
 }
 
-@media all and (min-width: 900px) {
-  .foot-container {
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: auto 70px;
-      grid-template-areas: "map con" "trade trade";
-  }
-  
-}

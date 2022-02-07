@@ -1,73 +1,26 @@
-.foot-container {
-color: white;
-  background-color: #555;
-  text-decoration: none;
-  width: 100%;
-  margin-top: 2rem;
-  display: grid;
-  grid-template-rows: auto auto 70px;
-  grid-template-areas: "map" "con" "trade";
-}
-
-.site {
-  display: flex;
-  padding: 1em;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  grid-area: map;
-}
-.links-icons {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-}
-
-.links-icons a {
-  text-decoration: none;
+.footer-container {
   color: white;
-
+  background-color: #555;
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0em 1.5em;
 }
-.links-icons a:hover {
-  font-weight: bold;
+
+.footer-container a {
+  color: white;
+}
+
+.footer-container a:hover {
   color: black;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  width: 100%;
- 
-}
-.social-icons img {
-  margin-right: 1rem;
-}
-.copyright {
-  grid-area: trade;
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.3em;
-  flex-direction:column;
-}
-span a,
-.copyright a {
-  color: white;
-  text-decoration: none;
-}
-.copyright a:hover {
-  text-decoration: underline;
+.social {
+  margin-left: 2rem;
 }
 
-@media all and (min-width: 900px) {
-  .foot-container {
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: auto 70px;
-      grid-template-areas: "map con" "trade trade";
-  }
-  
+.terms {
+  margin-left: auto;
 }

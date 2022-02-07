@@ -1,25 +1,32 @@
 .container {
-  background-color: #DDFDD8;
+  background-color: white;
   display: flex;
   position: sticky;
-  top: 0px;
   justify-content: space-between;
+  top: 0px;
   height: 80px;
-  border-bottom: 0.5px  solid var(--green);
+  border-bottom: 2px solid var(--green);
   z-index: 999;
+  font-size: 1.2rem;
 }
 
-.nav-links{
-  margin-bottom: 0.3rem;
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
 }
 .nav-item {
   text-decoration: none;
   color: black;
-  font-size: 1.3rem;
   margin-right: 0.5rem;
   transition: 0.3s ease all;
   padding: 0.7em 1em;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .nav-item:hover {
@@ -32,14 +39,13 @@
 }
 
 .active:hover {
-  color: white;
+  color: var(--light-green);
 }
 
 .bars {
-  display: flex;
   width: 50px;
   padding: 0.25em;
-  margin-left: 0.5rem;
+  margin-right: 0.25rem;
 }
 
 .bars:hover {
@@ -54,14 +60,15 @@
 .login {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
+  min-width: 200px;
 }
-.log-icon{
+.log-icon {
   width: 27px;
   height: 29px;
   margin: 0 -0.875rem 0 0.75rem;
 }
-.lang-icon{
+.lang-icon {
   width: 36px;
   height: 44px;
   margin: 0 0.5rem 0 -1.25rem;
@@ -94,11 +101,14 @@
   .bars {
     display: none;
   }
-
   .toggle {
-    display: initial;
+    display: flex;
   }
+
   .side-bar {
     display: none;
+  }
+  .login {
+    min-width: 300px;
   }
 }

@@ -63,7 +63,7 @@ export class SignupFormComponent implements OnInit {
       Validators.required,
       Validators.pattern('^(?=.*[A-Z].*[a-z])(?=.*[0-9]).{8,30}$'),
     ]);
-    this.iAgree = new FormControl(true, [Validators.requiredTrue]);
+    this.iAgree = new FormControl(null, [Validators.requiredTrue]);
   }
 
   createForm() {

@@ -80,31 +80,3 @@ body {
   color: black;
   border: 1px solid black;
 }
-
-// form styles
-
-.login-photo {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: -5rem;
-}
-
-.login-photo img {
-  position: relative;
-  max-width: 170px;
-  transform: translateY(-100px);
-}
-
-.signup-here {
-  // color: var(--green);
-  margin: 1rem auto 0rem;
-}
-
-.signup-here:hover {
-  color: black;
-}
-
-input.ng-dirty.ng-invalid.ng-touched {
-  border: 1px solid red;
-}

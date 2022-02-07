@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-container.component.scss']
 })
 export class FormContainerComponent implements OnInit {
-
-  constructor() { }
+  isActive: string = "login";
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  getActive(str: string) {
+    this.isActive = str;
   }
 
 }

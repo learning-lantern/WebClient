@@ -196,14 +196,16 @@ label {
 }
 
 .waves img {
-  position: absolute;
   width: 100%;
+
   transform: translateY(-70px);
   height: 55px;
 }
 
 .fadeInDown {
   animation-name: fadeInDown;
+=======
+
 }
 
 @media all and (min-width: 900px) {

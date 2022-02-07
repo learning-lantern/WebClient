@@ -1,35 +1,68 @@
-<form action="" class="form">
-  <div class="login-photo">
+<form
+  action=""
+  class="form arabic"
+  [formGroup]="loginForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="form-photo">
     <img src="../../../../../assets/images/login_photo.svg" alt="login" />
   </div>
   <div class="form-control">
-    <label for="userUniversiyt">الجامعة :</label>
-    <select name="userUniversity" id="userUniversity">
-      <option value="a"></option>
+    <label for="userUniversiyt">الجامعة: </label>
+    <select
+      name="userUniversity"
+      id="userUniversity"
+      formControlName="userUniversity"
+    >
       <option value="0">Assuit University</option>
       <option value="1">EELU University</option>
     </select>
+    <ng-container *ngIf="userUniversity.touched">
+      <small *ngIf="userUniversity.errors?.required">هذا الحقل مطلوب</small>
+    </ng-container>
   </div>
   <div class="form-control">
     <label for="userEmail">البريد الالكتروني: </label>
-    <input type="text" name="userEmail" id="userEmail" />
+    <input
+      type="text"
+      name="userEmail"
+      id="userEmail"
+      formControlName="userEmail"
+    />
+    <ng-container *ngIf="userEmail.touched && userEmail.dirty">
+      <small *ngIf="userEmail.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="userEmail.errors?.email"
+        >من فضلك ادخل بريد الكتروني صحيح</small
+      >
+    </ng-container>
   </div>
   <div class="form-control">
     <label for="userPassword">كلمة المرور: </label>
-    <input type="password" name="userPassword" id="userPassword" />
+    <input
+      type="password"
+      name="userPassword"
+      id="userPassword"
+      formControlName="userPassword"
+    />
+    <ng-container *ngIf="userPassword.touched && userPassword.dirty">
+      <small *ngIf="userPassword.errors?.required">هذا الحقل مطلوب</small>
+      <small *ngIf="userPassword.errors?.pattern"
+        >كلمة المرور طولها من 8 الى 30 ويجب أن تحتوي على حروف وأرقام</small
+      >
+    </ng-container>
   </div>
-  <div class="form-iAgree">
-    <div class="remember">
+  <div class="form-check">
+    <div>
       <input type="checkbox" name="rememberMe" id="rememberMe" />
-      <label for="rememberMe">تذكرني.</label>
+      <label for="rememberMe"> تذكرني</label>
     </div>
-    <a routerLink="#" class="forget">نسيت كلمة المرور؟</a>
+    <a routerLink="#">نسيت كلمة المرور؟</a>
   </div>
   <div class="form-submit">
     <button type="submit" class="btn pill-btn btn-primary">تسجيل الدخول</button>
   </div>
   <hr />
-  <a routerLink="../signup" class="signup-here"
+  <a routerLink="../signup" style="margin: 1rem auto 0rem"
     >ليس لديك حساب؟ انشئ حساب جديد الآن.</a
   >
 </form>

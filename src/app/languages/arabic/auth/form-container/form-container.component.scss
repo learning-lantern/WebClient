@@ -1,0 +1,17 @@
+.form-container {
+  width: 100%;
+  margin: 2rem 0rem;
+  padding: 3em 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /**/
+}
+
+.frame {
+  border: 2px solid var(--green);
+  padding: 2em;
+  width: max(400px, 55%);
+  max-width: 700px;
+  border-radius: 10px;
+}

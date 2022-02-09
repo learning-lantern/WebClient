@@ -34,7 +34,14 @@
       style="margin-right: -1.2rem"
     />
     <a routerLink="auth/login" class="nav-item toggle">Log In</a>
-    <a routerLink="/ar" class="nav-item">EN</a>
+    <a (click)="dropToggle()" class="nav-item pointer">EN</a>
+    <div
+      class="dropdown-content"
+      [ngStyle]="{ display: drop ? 'flex' : 'none' }"
+    >
+      <a class="pointer" (click)="switchLang('ar', 'en')">EN</a>
+      <a class="pointer" (click)="switchLang('en', 'ar')">AR</a>
+    </div>
     <img
       src="/assets/images/bars.svg"
       alt=""

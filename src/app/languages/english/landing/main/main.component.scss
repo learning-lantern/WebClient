@@ -1,17 +1,17 @@
 .welcome {
   display: flex;
   flex-direction: column;
+  padding: 1em;
 }
 
-.message {
-  margin-bottom: 4rem;
-  width: 100%;
-}
-
-.message h1 {
+.messageTitle {
   color: #0e6016;
   line-height: 1.5em;
   margin-bottom: 1.5rem;
+}
+
+.messageTitle span {
+  display: block;
 }
 
 .message p {
@@ -27,8 +27,8 @@
 }
 
 .welcome-img {
-  width: 303px;
-  margin-bottom: 5rem;
+  max-width: 500px;
+  min-width: 350px;
 }
 
 /*service grid styles*/
@@ -105,6 +105,7 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .contact-us img {
@@ -171,9 +172,9 @@ label {
   height: 280px;
 }
 .person {
-  position: absolute;
-  left: 22.3rem;
-  bottom: 3.75rem;
+  position: relative;
+  left: -32rem;
+  bottom: -3.75rem;
 }
 .waves img {
   width: 100%;
@@ -206,5 +207,12 @@ label {
 
   .toggle {
     display: initial;
+  }
+  .waves img {
+    transform: translateY(-50px);
+  }
+
+  .contact-us img {
+    transform: translateX(85px);
   }
 }

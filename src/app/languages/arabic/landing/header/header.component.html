@@ -1,54 +1,70 @@
 <div class="container">
-  <img
-    src="../../../../assets/images/bars.svg"
-    alt=""
-    class="bars"
-    (click)="showSidebar()"
-  />
-  <img src="../../../../assets/logoFinal.svg" alt="log" class="logo" />
+  <a routerLink="/"
+    ><img src="/assets/logoFinal.svg" alt="log" class="logo"
+  /></a>
+
+  <div class="nav-links toggle">
+    <a
+      routerLink="/en"
+      class="nav-item"
+      [class.active]="isActive == 'home'"
+      (click)="changeActive('home'); scrollTO('home')"
+      >Home</a
+    >
+    <a
+      class="nav-item"
+      [class.active]="isActive == 'service'"
+      (click)="changeActive('service'); scrollTO('services')"
+    >
+      Serives</a
+    >
+    <a
+      routerLink="#"
+      class="nav-item"
+      [class.active]="isActive == 'about'"
+      (click)="changeActive('about'); scrollTO('contact-us')"
+      >Contact Us</a
+    >
+  </div>
   <div class="login">
-    <div class="nav-links toggle">
-      <a
-        routerLink="/en"
-        class="nav-item"
-        [class.active]="isActive == 'home'"
-        (click)="changeActive('home')"
-        >الصفحة الرئيسية</a
-      >
-      <a
-        routerLink="/en"
-        class="nav-item"
-        [class.active]="isActive == 'service'"
-        (click)="changeActive('service')"
-      >
-        الخدمات</a
-      >
-      <a
-        routerLink="/en"
-        class="nav-item"
-        [class.active]="isActive == 'about'"
-        (click)="changeActive('about')"
-        >عن الموقع</a
-      >
+    <img
+      class="icon25 toggle"
+      src="/assets/images/login-icon.svg"
+      alt="login"
+      style="margin-right: -1.2rem"
+    />
+    <a routerLink="auth/login" class="nav-item toggle">Log In</a>
+    <a (click)="dropToggle()" class="nav-item pointer">EN</a>
+    <div
+      class="dropdown-content"
+      [ngStyle]="{ display: drop ? 'flex' : 'none' }"
+    >
+      <a class="pointer" (click)="switchLang('ar', 'en')">EN</a>
+      <a class="pointer" (click)="switchLang('en', 'ar')">AR</a>
     </div>
     <img
-      class="log-icon toggle"
-      src="../../../../assets/images/login-icon.svg"
+      src="/assets/images/bars.svg"
       alt=""
+      class="bars"
+      (click)="showSidebar()"
     />
-    <a routerLink="auth/login" class="nav-item toggle">تسجيل الدخول</a>
-    <a routerLink="/en" class="nav-item"
-      ><img
-        class="lang-icon"
-        src="../../../../assets/images/english(or)arabic icon.svg"
-        alt=""
-    /></a>
   </div>
-
   <div class="side-bar" [class.hidden]="isHidden">
-    <a routerLink="" class="side-item">الصفحةالرئيسية</a>
-    <a routerLink="" class="side-item">الخدمات</a>
-    <a routerLink="" class="side-item">عن الموقع></a>
-    <a routerLink="auth/login" class="side-item">تسجيل الدخول</a>
+    <a routerLink="" (click)="scrollTO('home'); showSidebar()" class="side-item"
+      >Home</a
+    >
+    <a
+      routerLink=""
+      (click)="scrollTO('services'); showSidebar()"
+      class="side-item"
+      >Serives</a
+    >
+    <a
+      routerLink=""
+      (click)="scrollTO('contact-us'); showSidebar()"
+      class="side-item"
+      >Contact Us</a
+    >
+    <a routerLink="auth/login" class="side-item">Log In</a>
   </div>
 </div>

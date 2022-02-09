@@ -25,7 +25,9 @@
 body {
   font-family: "roboto", sans-serif;
   position: relative;
+  margin: auto;
   min-width: 400px;
+  max-width: 1600px;
 }
 
 .logo {
@@ -92,4 +94,16 @@ body {
 .btn-primary:hover {
   color: black;
   border: 1px solid black;
+}
+
+.indent50 {
+  text-indent: 50px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.img-arabic {
+  transform: translateX(-1);
 }

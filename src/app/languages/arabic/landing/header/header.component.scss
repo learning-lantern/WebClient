@@ -1,15 +1,15 @@
 .container {
-  background-color: #DDFDD8;
+  background-color: #ddfdd8;
   display: flex;
   position: sticky;
   top: 0px;
   justify-content: space-between;
   height: 80px;
-  border-bottom: 0.5px  solid var(--green);
+  border-bottom: 0.5px solid rgba(var(--green));
   z-index: 999;
 }
 
-.nav-links{
+.nav-links {
   margin-bottom: 0.3rem;
 }
 .nav-item {
@@ -23,11 +23,11 @@
 }
 
 .nav-item:hover {
-  color: var(--light-green);
+  color: rgba(var(--light-green));
 }
 
 .active {
-  background: var(--light-brown);
+  background: rgba(var(--light-brown));
   border-radius: 999px;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .bars:hover {
-  border: 1px solid var(--light-green);
+  border: 1px solid rgba(var(--light-green));
   border-radius: 5px;
 }
 
@@ -56,12 +56,12 @@
   align-items: center;
   justify-content: space-around;
 }
-.log-icon{
+.log-icon {
   width: 27px;
   height: 29px;
   margin: 0 -0.875rem 0 0.75rem;
 }
-.lang-icon{
+.lang-icon {
   width: 36px;
   height: 44px;
   margin: 0 0.5rem 0 -1.25rem;
@@ -70,7 +70,7 @@
   z-index: 999;
   position: absolute;
   top: 80px;
-  background: var(--light-brown);
+  background: rgba(var(--light-brown));
   width: 100%;
   height: calc(100vh - 80px);
   text-align: center;

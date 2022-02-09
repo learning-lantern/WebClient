@@ -1,45 +1,40 @@
 .container {
-  background-color: white;
+  background: rgba(var(--very-light-green), 0.8);
   display: flex;
   position: sticky;
   justify-content: space-between;
+  align-items: center;
   top: 0px;
   height: 80px;
-  border-bottom: 2px solid var(--green);
+  border-bottom: 2px solid rgba(var(--green));
   z-index: 999;
   font-size: 1.2rem;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+  cursor: pointer;
 }
+
 .nav-item {
   text-decoration: none;
   color: black;
-  margin-right: 0.5rem;
+  margin: 0rem 0.3rem;
   transition: 0.3s ease all;
-  padding: 0.7em 1em;
+  padding: 0.7em 1.2em;
   font-weight: 500;
 }
 
 .nav-item:hover {
-  color: var(--light-green);
+  color: rgba(var(--brown));
 }
 
 .active {
-  background: var(--light-brown);
+  background: rgba(var(--light-brown));
   border-radius: 999px;
-}
-
-.active:hover {
-  color: var(--light-green);
 }
 
 .bars {
@@ -49,7 +44,7 @@
 }
 
 .bars:hover {
-  border: 1px solid var(--light-green);
+  border: 1px solid rgba(var(--light-green));
   border-radius: 5px;
 }
 
@@ -63,21 +58,12 @@
   justify-content: flex-end;
   min-width: 200px;
 }
-.log-icon {
-  width: 27px;
-  height: 29px;
-  margin: 0 -0.875rem 0 0.75rem;
-}
-.lang-icon {
-  width: 36px;
-  height: 44px;
-  margin: 0 0.5rem 0 -1.25rem;
-}
+
 .side-bar {
   z-index: 999;
   position: absolute;
   top: 80px;
-  background: var(--light-brown);
+  background: rgba(var(--light-brown));
   width: 100%;
   height: calc(100vh - 80px);
   text-align: center;

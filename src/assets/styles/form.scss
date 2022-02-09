@@ -20,7 +20,7 @@ form select,
 form input {
   background: white;
   padding: 0.5em;
-  border: 1px solid var(--light-green);
+  border: 1px solid rgba(var(--light-green));
   border-radius: 8px;
 }
 
@@ -49,7 +49,6 @@ form a:hover {
   color: black;
 }
 
-//form errors
 form input.ng-invalid.ng-touched.ng-dirty {
   border: 1px solid red;
 }

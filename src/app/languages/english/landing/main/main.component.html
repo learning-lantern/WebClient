@@ -1,5 +1,5 @@
 <div class="welcome">
-  <div class="message">
+  <div class="message" id="home">
     <h1>Welcome To Learning Lantern</h1>
     <p class="toggle">
       We improve the educational process to a new and developed extent, by
@@ -19,7 +19,11 @@
 <div class="waves">
   <img src="../../../../../assets/images/waves.png" alt="" />
 </div>
-<div class="services-container" id="services">
+<div
+  class="services-container"
+  id="services"
+  (sectionChange)="sectionChange($event)"
+>
   <h1 class="serv-title">Our Services</h1>
   <div class="serv-grid">
     <div class="serv-item">
@@ -70,7 +74,7 @@
   </div>
 </div>
 
-<div class="contact-us">
+<div class="contact-us" id="contact-us">
   <img src="../../../../assets/images/contact us desgin.svg" alt="" />
   <div class="contant"><h2>Contact Us</h2></div>
 

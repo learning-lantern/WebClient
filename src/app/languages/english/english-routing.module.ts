@@ -5,10 +5,6 @@ import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
 import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
 import { LandingContainerComponent } from './landing/landing-container/landing-container.component';
-import { AddTaskComponent } from './todo/add-task/add-task.component';
-import { HomeComponent } from './todo/home/home.component';
-import { NotFoundComponent } from './todo/not-found/not-found.component';
-import { TaskComponent } from './todo/task/task.component';
 
 const routes: Routes = [
   {
@@ -33,16 +29,6 @@ const routes: Routes = [
       },
     ],
   },
-  {
-    path: 'td',
-    component: HomeComponent,
-  },
-  { path: 'td/task', component: TaskComponent },
-  { path: 'td/task/:id', component: TaskComponent },
-
-  { path: 'td/add-task', component: AddTaskComponent },
-  { path: 'not-found', component: NotFoundComponent },
-  { path: 'chat/:id', component: ChatComponent },
 ];
 
 @NgModule({

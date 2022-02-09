@@ -10,15 +10,8 @@ import { FooterComponent } from './landing/footer/footer.component';
 import { FormContainerComponent } from './auth/form-container/form-container.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-//todo
-import { HomeComponent } from './todo/home/home.component';
-import { AddTaskComponent } from './todo/add-task/add-task.component';
-import { TaskComponent } from './todo/task/task.component';
-import { NotFoundComponent } from './todo/not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
-
-
 
 @NgModule({
   declarations: [
@@ -30,18 +23,13 @@ import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
     FormContainerComponent,
     LoginFormComponent,
     SignupFormComponent,
-    HomeComponent,
-    AddTaskComponent,
-    TaskComponent,
-    NotFoundComponent,
-    ChatComponent
-
+    ChatComponent,
   ],
   imports: [
     CommonModule,
     EnglishRoutingModule,
     ReactiveFormsModule,
-    FormsModule
-  ]
+    FormsModule,
+  ],
 })
-export class EnglishModule { }
+export class EnglishModule {}

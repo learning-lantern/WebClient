@@ -1,15 +1,14 @@
 <div class="container">
-  <div class="logo-container">
-    <a routerLink="/"
-      ><img src="/assets/logoFinal.svg" alt="log" class="logo"
-    /></a>
-  </div>
+  <a routerLink="/"
+    ><img src="/assets/logoFinal.svg" alt="log" class="logo"
+  /></a>
+
   <div class="nav-links toggle">
     <a
       routerLink="/en"
       class="nav-item"
       [class.active]="isActive == 'home'"
-      (click)="changeActive('home')"
+      (click)="changeActive('home'); scrollTO('home')"
       >Home</a
     >
     <a
@@ -23,18 +22,19 @@
       routerLink="#"
       class="nav-item"
       [class.active]="isActive == 'about'"
-      (click)="changeActive('about')"
-      >About Us</a
+      (click)="changeActive('about'); scrollTO('contact-us')"
+      >Contact Us</a
     >
   </div>
   <div class="login">
     <img
-      class="log-icon toggle"
+      class="icon25 toggle"
       src="/assets/images/login-icon.svg"
       alt="login"
+      style="margin-right: -1.2rem"
     />
     <a routerLink="auth/login" class="nav-item toggle">Log In</a>
-    <a routerLink="" class="nav-item">EN</a>
+    <a routerLink="/ar" class="nav-item">EN</a>
     <img
       src="/assets/images/bars.svg"
       alt=""
@@ -43,9 +43,21 @@
     />
   </div>
   <div class="side-bar" [class.hidden]="isHidden">
-    <a routerLink="" class="side-item">Home</a>
-    <a routerLink="" class="side-item">Serives</a>
-    <a routerLink="" class="side-item">About Us</a>
+    <a routerLink="" (click)="scrollTO('home'); showSidebar()" class="side-item"
+      >Home</a
+    >
+    <a
+      routerLink=""
+      (click)="scrollTO('services'); showSidebar()"
+      class="side-item"
+      >Serives</a
+    >
+    <a
+      routerLink=""
+      (click)="scrollTO('contact-us'); showSidebar()"
+      class="side-item"
+      >Contact Us</a
+    >
     <a routerLink="auth/login" class="side-item">Log In</a>
   </div>
 </div>

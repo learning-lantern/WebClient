@@ -53,8 +53,8 @@
 }
 
 .serv-title {
-  color: var(--green);
-  border-bottom: 3px solid var(--green);
+  color: rgba(var(--green));
+  border-bottom: 3px solid rgba(var(--green));
   padding: 0.5em;
   margin-bottom: 5rem;
 }
@@ -88,7 +88,7 @@
 }
 
 .imp {
-  color: var(--green);
+  color: rgba(var(--green));
 }
 
 .read_more {

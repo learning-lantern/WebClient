@@ -1,17 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  isActive = "home";
+export class HeaderComponent {
+  isActive = 'home';
   isHidden = true;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor() {}
 
   changeActive(str: string) {
     this.isActive = str;
@@ -19,7 +16,4 @@ export class HeaderComponent implements OnInit {
   showSidebar() {
     this.isHidden = !this.isHidden;
   }
-
 }
-
-

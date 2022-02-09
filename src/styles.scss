@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(./assets/fonts/cairo/cairo.css);
 @import url(./assets/fonts/roboto/roboto.css);
-@import url(./assets/styles/form.scss);
+@import Url(./assets/styles/form.scss);
 :root {
-  --green: #0e6016;
-  --light-green: #1cab04;
-  --very-light-green: #dafdd4;
-  --brown: #9f0000;
-  --light-brown: #f3bb7d;
+  --green: 14, 96, 22;
+  --light-green: 28, 171, 4;
+  --very-light-green: 217, 253, 211;
+  --brown: 159, 0, 0;
+  --light-brown: 243, 187, 125;
 }
 *,
 *::before,
@@ -48,6 +48,11 @@ body {
     contrast(101%);
 }
 
+.filter-brown {
+  filter: invert(7%) sepia(87%) saturate(6457%) hue-rotate(11deg)
+    brightness(110%) contrast(103%);
+}
+
 // icon sizes
 
 .icon50 {
@@ -56,6 +61,14 @@ body {
 
 .icon40 {
   width: 40px;
+}
+
+.icon30 {
+  width: 30px;
+}
+
+.icon25 {
+  width: 25px;
 }
 
 // buttons styles
@@ -71,8 +84,8 @@ body {
   padding: 0.5em 3em;
   display: inline-block;
   color: white;
-  border: 1px solid var(--green);
-  background: var(--green);
+  border: 1px solid rgba(var(--green));
+  background: rgba(var(--green));
   margin: 1rem 0rem;
 }
 

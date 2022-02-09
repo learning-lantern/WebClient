@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-form-container',
   templateUrl: './form-container.component.html',
-  styleUrls: ['./form-container.component.scss']
+  styleUrls: ['./form-container.component.scss'],
 })
-export class FormContainerComponent implements OnInit {
-  isActive: string = "login";
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
+export class FormContainerComponent {
+  isActive: string = 'login';
+  constructor() {}
 
   getActive(str: string) {
     this.isActive = str;
   }
-
 }

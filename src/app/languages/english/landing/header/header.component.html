@@ -12,6 +12,7 @@
       >Home</a
     >
     <a
+      routerLink="/en"
       class="nav-item"
       [class.active]="isActive == 'service'"
       (click)="changeActive('service'); scrollTO('services')"
@@ -19,7 +20,7 @@
       Serives</a
     >
     <a
-      routerLink="#"
+      routerLink="/en"
       class="nav-item"
       [class.active]="isActive == 'about'"
       (click)="changeActive('about'); scrollTO('contact-us')"

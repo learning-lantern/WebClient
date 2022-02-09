@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserUniversity } from 'src/app/interfaces/user-university';
 import { confirmPassword } from 'src/app/custom-validators/confirm-password.validator';
@@ -9,7 +9,7 @@ import { validateName } from 'src/app/custom-validators/validate-name.validators
   templateUrl: './signup-form.component.html',
   styleUrls: ['./signup-form.component.scss'],
 })
-export class SignupFormComponent implements OnInit {
+export class SignupFormComponent {
   universitiesList: UserUniversity[] = [
     {
       id: '0',
@@ -33,7 +33,6 @@ export class SignupFormComponent implements OnInit {
     this.initFormControls();
     this.createForm();
   }
-  ngOnInit(): void {}
   initFormControls() {
     this.userUniversity = new FormControl('', [Validators.required]);
     this.userFName = new FormControl('', [

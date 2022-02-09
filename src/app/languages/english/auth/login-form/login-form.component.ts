@@ -1,10 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserUniversity } from 'src/app/interfaces/user-university';
 
 @Component({
@@ -12,7 +7,7 @@ import { UserUniversity } from 'src/app/interfaces/user-university';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
 })
-export class LoginFormComponent implements OnInit {
+export class LoginFormComponent {
   universitiesList: UserUniversity[] = [
     {
       id: '0',
@@ -31,8 +26,6 @@ export class LoginFormComponent implements OnInit {
     this.initFormControls();
     this.createForm();
   }
-
-  ngOnInit(): void {}
 
   initFormControls() {
     this.userUniversity = new FormControl('', [Validators.required]);

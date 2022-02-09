@@ -2,11 +2,20 @@
   color: white;
   background-color: #555;
   width: 100%;
-  margin-top: 5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 60px;
-  padding: 0em 1.5em;
+  min-height: 60px;
+  margin-top: 5rem;
+  padding: 1em;
+  text-align: center;
+}
+
+.footer-container > * {
+  margin-top: 1rem;
+}
+.sponsor {
+  width: 100%;
 }
 
 .footer-container a {
@@ -17,10 +26,17 @@
   color: black;
 }
 
-.social {
-  margin-left: 2rem;
-}
-
-.terms {
-  margin-left: auto;
+@media all and (min-width: 900px) {
+  .footer-container {
+    text-align: start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-container > * {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .terms {
+    text-align: end;
+  }
 }

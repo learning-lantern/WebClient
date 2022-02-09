@@ -1,0 +1,69 @@
+<div class="main-container">
+    <div class="taskTop">
+        <img src="../../../../../assets/images/bar-icon.svg" alt="bar-icon" (click)="showSidebar()">
+        <p>Tasks</p>
+         <!-- <select name="..." id="" value="...">
+                <option value=""></option>
+                <option value=""></option>
+            </select> -->
+    </div>
+    <div class="sort">
+        <img src="../../../../../assets/images/sort-icon.svg" alt="sort-icon">Sort
+    </div>
+</div>
+<div class="add-task">
+    <form [formGroup]="AddTask">
+        <div>
+            <div class="addinput">
+                <img src="../../../../../assets/images/add-icon.svg" alt="add-icon">
+                <input class="add" type="text" placeholder="Add Task" formControlName="TaskName" />
+            </div>
+
+
+            <div class="icons">
+
+                <span class="datepicker-toggle">
+                    <span class="datepicker-toggle-button"></span>
+                    <input type="date" class="datepicker-input" formControlName="TaskDate">
+                </span>
+                <span> <img src="../../../../../assets/images/reminder me-icon.svg" alt="Reminder"></span>
+                <span> <img src="../../../../../assets/images/repeat-icon.svg" alt="Repeat"></span>
+            </div>
+            <div class="add-but">
+                <button type="button" (click)="addtask()" formArrayName="Addnewtask">Add</button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- <div class="side-bar" [class.hidden]="isHidden">
+        <a routerLink="" class="side-item"></a>
+        <a routerLink="" class="side-item"></a>
+        <a routerLink="" class="side-item"></a>
+        <a routerLink="" class="side-item"></a>
+      </div> -->
+</div>
+
+
+<!-- <div class="taks">
+    <ul>
+        <li class="one-task"></li><hr>
+        <li class="one-task"></li><hr>
+        <li class="one-task"></li><hr>
+        <li class="one-task"></li><hr>
+        <li class="one-task"></li><hr>
+        <li class="one-task"></li><hr>
+    
+    </ul> -->
+
+    <!-- *ngIF="taks=Addnewtask.length" -->
+    <div>  
+    
+    <ng-container *ngFor="let tasks of getTasks().controls ; let task=index  ">
+        <ul>
+            <li class="one-task" formControlName="TaskName"></li>
+        </ul>
+        <img src="../../../../../assets/images/delete-icon.svg" alt="Delete Task" (click)="removeTask(task)">
+        <hr>
+    </ng-container>
+</div> 

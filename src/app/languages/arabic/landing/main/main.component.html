@@ -1,7 +1,8 @@
-<div class="welcome">
+<div class="welcome" id="home">
   <div class="message">
-    <h1>مرحبا بك في Learning Lantern</h1>
-
+    <h1 class="messageTitle">
+      مرحبا بك في <span class="indent50">Learning Lantern</span>
+    </h1>
     <p class="toggle">
       نحن نرتقي بالعملية التعليمية إلى مدى جديد ومتطور ، من خلال بناء بيئة
       تعليمية متكاملة وسهلة الاستخدام عبر الإنترنت توافق البيئة الحقيقية لتلقي
@@ -17,75 +18,80 @@
   </div>
 </div>
 <div class="waves">
-  <img src="../../../../../assets/images/waves.png" alt="waves" />
+  <img src="../../../../../assets/images/waves.png" alt="" />
 </div>
-<div class="services-container">
-  <h1 class="serv-title">الخدمات</h1>
+<div class="services-container" id="services">
+  <h1 class="serv-title">خدماتنا</h1>
   <div class="serv-grid">
     <div class="serv-item">
       <img src="../../../../assets/images/virtual-classroom.svg" alt="" />
-      <strong class="serv-name">الفصول الأفتراضية</strong>
+      <strong class="serv-name">الفصول الافتراضية</strong>
       <p>
-        تواصل الطالب والمدرس معًا عبر
-        <strong class="imp">اجتماعات تفاعلية </strong> من خلال الإنترنت
+        يتواصل الطلاب والمدرس معًا عبر
+        <strong class="imp">اجتماعات تفاعلية</strong> من خلال الإنترنت .
       </p>
-      <a routerLink="" class="read_more">اقرأ المزيد >></a>
     </div>
     <div class="serv-item">
       <img src="../../../../assets/images/chat.svg" alt="" />
-      <strong class="serv-name">الدردشة الفورية</strong>
+      <strong class="serv-name">المحادثات الفورية</strong>
       <p>
-        ابق على تواصل دائم مع الآخرين عن طريق إرسال
-        <strong class="imp"> الرسائل الفورية.</strong>
+        ابق على تواصل دائم مع الآخرين عن طريق خدمة
+        <strong class="imp"> المحادثات الفورية.</strong>
       </p>
-      <a routerLink="" class="read_more">اقرأ المزيد >></a>
     </div>
     <div class="serv-item">
       <img src="../../../../assets/images/video.svg" alt="" />
       <strong class="serv-name">الفيديو التفاعلي</strong>
       <p>
-        يمكنك استخدام<strong class="imp">
-          خدمة استضافة الفيديوهات التعليمية
-        </strong>
-        فى أي مكان وفي أي وقت عبر<strong> مقاطع الفيديو التفاعلية . </strong>
+        التعليم أصبح متاح في أي مكان وأي وقت من خلال خدمة
+        <strong class="imp">الفيديوهات التفاعلية. </strong>
       </p>
-      <a routerLink="" class="read_more">اقرأ المزيد >></a>
     </div>
     <div class="serv-item">
       <img src="../../../../assets/images/calendar.svg" alt="" />
       <strong class="serv-name">التقويم وقائمة المهام</strong>
       <p>
-        حافظ على تنظيم نفسك وتتبع مهامك من خلال
-        <strong class="imp"> خدمات التقويم وقائمة المهام </strong>المتكاملة.
+        انجز مهامك بشكل منظم باستخدام خدمة
+        <strong class="imp"> التقويم وقائمة المهام الشخصية </strong>.
       </p>
-      <a routerLink="" class="read_more">اقرأ المزيد >></a>
     </div>
     <div class="serv-item">
       <img src="../../../../assets/images/exam.svg" alt="" />
-      <strong class="serv-name">الامتحانات والاختبارات عبر الإنترنت</strong>
+      <strong class="serv-name">الاختبارات عبر الإنترنت </strong>
       <p>
-        اختبر تقدمك في التعلم عن طريق
-        <strong class="imp"> الامتحانات والاختبارات عبر الإنترنت.</strong>
+        قم بقياس مدى تعلمك عن طريق خدمة
+        <strong class="imp"> الاختبارات عبر الإنترنت.</strong>
       </p>
-      <a routerLink="" class="read_more">اقرأ المزيد >></a>
     </div>
   </div>
-</div>
-
-<div class="contact-us">
-  <img src="../../../../assets/images/contact us desgin.svg" alt="" />
-  <div class="contant"><h2>للتواصل معنا</h2></div>
-
-  <div class="contact-us-form">
-    <form action="" class="contact-form">
-      <label for="email">البريد الالكتروني :</label>
-      <input type="text" id="email" />
-      <label for="message">رساله :</label>
-      <textarea id="message" rows="6"></textarea>
-      <button type="submit">إرسال</button>
+  <div class="contact-us">
+    <form class="contact-form form">
+      <h1 class="form-title">تواصل معنا</h1>
+      <div class="form-control-group">
+        <div class="sub-control">
+          <label for="userName">الاسم: </label>
+          <input type="text" name="userName" id="userName" />
+        </div>
+        <div class="sub-control">
+          <label for="subject">موضوع الرسالة: </label>
+          <input type="text" name="subject" id="subject" />
+        </div>
+      </div>
+      <div class="form-control">
+        <label for="userEmail">البريد الالكتروني: </label>
+        <input type="email" name="userEmail" id="userEmail" />
+      </div>
+      <div class="form-control">
+        <label for="userEmail">الرسالة: </label>
+        <textarea name="userMessage" id="userMessage" rows="5"></textarea>
+      </div>
+      <button class="btn-primary">ارسال</button>
     </form>
-  </div>
-  <div class="person toggle">
-    <img src="../../../../assets/images/contact us persom.svg" alt="" />
+    <img
+      src="/assets/images/contactUs.svg"
+      alt="contact"
+      class="toggle"
+      style="max-width: 350px; margin-right: 2rem"
+    />
   </div>
 </div>

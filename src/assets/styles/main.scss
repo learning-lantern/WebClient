@@ -1,0 +1,138 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.messageTitle {
+  color: #0e6016;
+  line-height: 1.5em;
+  margin-bottom: 1.5rem;
+}
+
+.messageTitle span {
+  display: block;
+}
+
+.message p {
+  line-height: 1.5em;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.welcome-img {
+  max-width: 500px;
+  min-width: 350px;
+}
+
+/*service grid styles*/
+.services-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.serv-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-auto-rows: 400px;
+}
+
+.serv-title {
+  color: rgba(var(--green));
+  border-bottom: 3px solid rgba(var(--green));
+  padding: 0.5em;
+  margin-bottom: 3rem;
+}
+
+.serv-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.serv-item img {
+  width: 190px;
+  height: 190px;
+  margin-bottom: 14px;
+}
+
+.toggle {
+  display: none;
+}
+
+.serv-item p {
+  margin-top: 17px;
+}
+
+.imp {
+  color: rgba(var(--green));
+}
+
+.waves img {
+  width: 100%;
+}
+.contact-us {
+  min-height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.contact-form {
+  width: max(400px, 50%);
+  background: rgba(var(--green), 0.2);
+  padding: 1em;
+  border-radius: 0.5rem;
+}
+
+@media all and (min-width: 900px) {
+  .welcome {
+    flex-direction: row;
+    padding: 2em 4em;
+    align-items: center;
+  }
+
+  .welcome-img {
+    width: 374px;
+    margin-bottom: 5rem;
+  }
+
+  .message p {
+    font-size: 1.3rem;
+  }
+
+  .serv-item img {
+    width: 205px;
+    height: 205px;
+  }
+
+  .serv-name {
+    font-size: 22.5px;
+  }
+
+  .toggle {
+    display: initial;
+  }
+  .waves img {
+    transform: translateY(-50px);
+  }
+}

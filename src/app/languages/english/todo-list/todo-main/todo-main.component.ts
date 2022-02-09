@@ -4,7 +4,7 @@ import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-todo-main',
   templateUrl: './todo-main.component.html',
-  styleUrls: ['./todo-main.component.scss']
+  styleUrls: ['./todo-main.component.scss'],
 })
 export class TodoMainComponent implements OnInit {
   isHidden = true;
@@ -18,14 +18,12 @@ export class TodoMainComponent implements OnInit {
     this.isHidden = !this.isHidden;
   }
 
-
-
   getTasks(): FormArray {
     return this.AddTask.get('Addnewtask') as FormArray;
   }
   // to add task in array
   addtask() {
-    this.getTasks().push(this.CreatNewTask('newtask'))
+    this.getTasks().push(this.CreatNewTask('newtask'));
   }
   removeTask(i: number) {
     this.getTasks().removeAt(i);
@@ -36,22 +34,19 @@ export class TodoMainComponent implements OnInit {
       case 'init':
         newTasks = this.fb.group({
           TaskName: '',
-          TaskDate:'',
-          Addnewtask: this.fb.array([6])
+          TaskDate: '',
+          Addnewtask: this.fb.array([6]),
         });
         break;
       case 'newtask':
         newTasks = this.fb.group({
           // TaskName:'',
-          TaskDetails: this.fb.array([])
+          TaskDetails: this.fb.array([]),
         });
         break;
     }
-    return newTasks
+    return newTasks;
   }
 
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -28,6 +28,8 @@ body {
   margin: auto;
   min-width: 400px;
   max-width: 1600px;
+  min-height: 100vh;
+  padding-bottom: 260px;
 }
 
 .logo {
@@ -107,4 +109,10 @@ body {
 
 .img-arabic {
   transform: scaleX(-1);
+}
+
+@media all and (min-width: 900px) {
+  body {
+    padding-bottom: 80px;
+  }
 }

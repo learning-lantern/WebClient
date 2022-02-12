@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { CoreModule } from './core/core.module';
 const config: SocketIoConfig = {
   url: environment.socketURL, // socket server url;
   options: {
@@ -19,6 +20,7 @@ const config: SocketIoConfig = {
     FormsModule,
     ReactiveFormsModule,
     SocketIoModule.forRoot(config),
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

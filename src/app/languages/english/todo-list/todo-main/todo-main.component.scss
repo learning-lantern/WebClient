@@ -6,6 +6,7 @@
   width: 100%;
   height: 100%;
   background-color: #d1cccc26;
+  
 }
 
 .taskTop p {
@@ -14,7 +15,7 @@
 }
 
 .taskTop img
- {
+  {
   margin: 1.2rem 0 0 1.2rem;
   height: 17px;
   
@@ -23,21 +24,26 @@
   font-size: 18px;
   margin: 1.2rem 2rem 0 1.2rem;
 }
+.taskTop img,
+.sort:hover{
+  cursor: pointer;
+}
 .add-task{
   border: 2px solid #a8d4ad;
   border-radius: 11px;
-  margin-top: 1rem;
- 
+  margin: 1rem 0 0 1rem;
+  width: 98%;
+  background-color: #ededed;
 }
 .taks{
   z-index: 999;
-  scroll-behavior: smooth;
 }
 .addinput{
   border-bottom: 1px solid #a8d4ad;
   margin-top: 2rem;
   width: 90%;
   margin-left: 4rem;
+  background-color: white;
 }
 .addinput img{
   margin-left: 1rem;
@@ -45,8 +51,13 @@
 .addinput input{
 border: none;  
 margin-left: 2rem;
-width: 71%;
+background-color: #e6e1e126;
+width: 94%;
 }
+.addinput input:focus{
+  outline: none;
+}
+
 .icons{
   margin: 1.2rem 0 0 7rem;
 }
@@ -70,22 +81,7 @@ width: 71%;
 }
 .datepicker-input {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   opacity: 0;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-.datepicker-input::-webkit-calendar-picker-indicator {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
   cursor: pointer;
 }
 .add-but{
@@ -101,10 +97,20 @@ margin-bottom: 1rem;
 }
 
 .add-but button:hover {
- 
-  color: var(--green);
+  color:rgba(var(--green));
+  cursor: pointer;
 }
-// .one-task{
-//   list-style: none;
+
+
+// article {
+//   float: left;
+//   padding: 20px;
+//   width: 100%;
 // }
+// section::after {
+//   // content: "";
+//   display: table;
+//   clear: both;
+// }
+
 

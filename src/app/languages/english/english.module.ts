@@ -14,7 +14,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
 import { TodoContainerComponent } from './todo-list/todo-container/todo-container.component';
 import { TodoHeaderComponent } from './todo-list/todo-header/todo-header.component';
-import { TodoFooterComponent } from './todo-list/todo-footer/todo-footer.component';
 import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
     ChatComponent,
     TodoContainerComponent,
     TodoHeaderComponent,
-    TodoFooterComponent,
     TodoMainComponent,
   ],
   imports: [

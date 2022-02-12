@@ -1,116 +1,79 @@
-.main-container {
-  font-size: 1.4rem;
-  display: flex;
-  position: sticky;
-  justify-content: space-between;
+.container {
   width: 100%;
-  height: 100%;
-  background-color: #d1cccc26;
-  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
 }
 
-.taskTop p {
-  margin-left: 1.1rem;
-  display: inline-block;
+.add-task-container {
+  border: 2px solid rgba(var(--light-green), 0.5);
+  background: rgba(var(--light-silver));
+  border-radius: 0.5rem;
 }
 
-.taskTop img
-  {
-  margin: 1.2rem 0 0 1.2rem;
-  height: 17px;
-  
+.myform {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
 }
-.sort {
-  font-size: 18px;
-  margin: 1.2rem 2rem 0 1.2rem;
+
+.form-label {
+  background: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.taskTop img,
-.sort:hover{
-  cursor: pointer;
-}
-.add-task{
-  border: 2px solid #a8d4ad;
-  border-radius: 11px;
-  margin: 1rem 0 0 1rem;
-  width: 98%;
-  background-color: #ededed;
-}
-.taks{
-  z-index: 999;
-}
-.addinput{
-  border-bottom: 1px solid #a8d4ad;
-  margin-top: 2rem;
-  width: 90%;
-  margin-left: 4rem;
+
+.form-input {
+  width: 100%;
+  border: none;
   background-color: white;
+  height: 50px;
+  border-radius: 0px;
+  outline: none;
+  transition: 0.3 all ease;
+  margin: 0px;
 }
-.addinput img{
+
+.form-input:focus {
+  border-bottom: 2px solid rgba(var(--light-green));
+}
+
+.sub-container {
+  display: flex;
+  width: 90%;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  align-items: center;
+}
+
+.reminder-list {
+  border: none;
+  border-radius: 0px;
+  margin: 0px;
+  margin-left: -0.4rem;
+  background: #ccc;
+}
+
+.reminder {
+  display: flex;
+  align-items: center;
+}
+
+.drop-down {
   margin-left: 1rem;
 }
-.addinput input{
-border: none;  
-margin-left: 2rem;
-background-color: #e6e1e126;
-width: 94%;
-}
-.addinput input:focus{
-  outline: none;
-}
 
-.icons{
-  margin: 1.2rem 0 0 7rem;
+.task-list li {
+  min-height: 35px;
+  background: #eee;
 }
-.icons span{
-  margin-right: 1.5rem;
-  right: 1rem;
-}
-.datepicker-toggle {
-  display: inline-block;
-  position: relative;
-  width: 18px;
-  height: 19px;
-}
-.datepicker-toggle-button {
-  position: absolute;
-  left: 9px;
-  top: -8px;
-  width: 132%;
-  height: 148%;
-  background-image: url('../../../../../assets/images/calendar-icon.svg');
-}
-.datepicker-input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-.add-but{
-  width: 100%;
-display: flex;
-justify-content: end;
-margin-bottom: 1rem;
-}
-.add-but button{
-  border: none;
-  margin-right: 3.95rem;
-  background: none;
-}
-
-.add-but button:hover {
-  color:rgba(var(--green));
-  cursor: pointer;
-}
-
-
-// article {
-//   float: left;
-//   padding: 20px;
-//   width: 100%;
-// }
-// section::after {
-//   // content: "";
-//   display: table;
-//   clear: both;
-// }
-
-

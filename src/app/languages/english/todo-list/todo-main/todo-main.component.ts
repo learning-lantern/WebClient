@@ -5,7 +5,7 @@ import { ApiService } from 'src/app/core/Http/api.service';
 @Component({
   selector: 'app-todo-main',
   templateUrl: './todo-main.component.html',
-  styleUrls: ['./todo-main.component.scss']
+  styleUrls: ['./todo-main.component.scss'],
 })
 export class TodoMainComponent implements OnInit {
 
@@ -28,6 +28,7 @@ export class TodoMainComponent implements OnInit {
     });
   }
 
+
   CreatNewTask(tasks: string): FormGroup {
     let newTasks = this.fb.group({});
     newTasks=this.fb.group({
@@ -43,8 +44,8 @@ export class TodoMainComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-  }
+
+
   getTasks(): FormArray {
     return <FormArray> this.AddTask.get('addNewTask');
   }
@@ -52,11 +53,15 @@ export class TodoMainComponent implements OnInit {
   // to add task in array
 
   addtask() {
+
     this.getTasks().push(this.CreatNewTask('newTasks'));
+
   }
 
   removeTask(i: number) {
     this.getTasks().removeAt(i);
   }
 
+
+  ngOnInit(): void {}
 }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 const config: SocketIoConfig = {
   url: environment.socketURL, // socket server url;
   options: {
@@ -21,6 +22,7 @@ const config: SocketIoConfig = {
     ReactiveFormsModule,
     SocketIoModule.forRoot(config),
     CoreModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

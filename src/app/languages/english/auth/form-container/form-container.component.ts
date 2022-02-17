@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-container',
@@ -7,7 +8,10 @@ import { Component } from '@angular/core';
 })
 export class FormContainerComponent {
   isActive: string = 'login';
-  constructor() {}
+  constructor(private router: Router) {
+    if (localStorage.getItem('passport')) router.navigate(['/en/class']);
+    else this.router.navigate(['en/auth/login']);
+  }
 
   getActive(str: string) {
     this.isActive = str;

@@ -28,13 +28,24 @@
     >
   </div>
   <div class="login">
-    <img
-      class="icon25 toggle"
-      src="/assets/images/login-icon.svg"
-      alt="login"
-      style="margin-right: -1.2rem"
-    />
-    <a routerLink="auth/login" class="nav-item toggle">Log In</a>
+    <ng-container *ngIf="showLogin">
+      <img
+        class="icon25 toggle"
+        src="/assets/images/login-icon.svg"
+        alt="login"
+        style="margin-right: -1.2rem"
+      />
+      <a routerLink="auth/login" class="nav-item toggle">Log In</a>
+    </ng-container>
+    <ng-container *ngIf="!showLogin">
+      <img
+        class="icon25 toggle"
+        src="/assets/images/book.svg"
+        alt="login"
+        style="margin-right: -1.2rem"
+      />
+      <a routerLink="/en/class" class="nav-item toggle">My Classroom</a>
+    </ng-container>
     <a (click)="dropToggle()" class="nav-item pointer">EN</a>
     <div
       class="dropdown-content"
@@ -66,6 +77,11 @@
       class="side-item"
       >Contact Us</a
     >
-    <a routerLink="auth/login" class="side-item">Log In</a>
+
+    <a *ngIf="showLogin" routerLink="auth/login" class="side-item">Log In</a>
+
+    <a *ngIf="!showLogin" routerLink="/en/class" class="side-item"
+      >My Classroom</a
+    >
   </div>
 </div>

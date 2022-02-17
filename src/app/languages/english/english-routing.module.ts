@@ -3,9 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormContainerComponent } from './auth/form-container/form-container.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
-import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
+import { ClassListComponent } from './class/class-list/class-list.component';
 import { LandingContainerComponent } from './landing/landing-container/landing-container.component';
-import { TodoContainerComponent } from './todo-list/todo-container/todo-container.component';
 
 const routes: Routes = [
   {
@@ -31,8 +30,12 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'to-do',
-    component: TodoContainerComponent,
+    path: 'class',
+    component: ClassListComponent,
+  },
+  {
+    path: '**',
+    component: LandingContainerComponent,
   },
 ];
 

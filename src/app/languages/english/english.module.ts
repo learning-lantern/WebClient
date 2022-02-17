@@ -11,10 +11,7 @@ import { FormContainerComponent } from './auth/form-container/form-container.com
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
-import { TodoContainerComponent } from './todo-list/todo-container/todo-container.component';
-import { TodoHeaderComponent } from './todo-list/todo-header/todo-header.component';
-import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
+import { ClassListComponent } from './class/class-list/class-list.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +23,7 @@ import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
     FormContainerComponent,
     LoginFormComponent,
     SignupFormComponent,
-    ChatComponent,
-    TodoContainerComponent,
-    TodoHeaderComponent,
-    TodoMainComponent,
+    ClassListComponent,
   ],
   imports: [
     CommonModule,

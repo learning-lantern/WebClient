@@ -3,7 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormContainerComponent } from './auth/form-container/form-container.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
+import { CalenderComponent } from './class/calender/calender.component';
 import { ClassListComponent } from './class/class-list/class-list.component';
+import { MyCoursesComponent } from './class/my-courses/my-courses.component';
+import { TodoMatComponent } from './class/todo-mat/todo-mat.component';
 import { LandingContainerComponent } from './landing/landing-container/landing-container.component';
 
 const routes: Routes = [
@@ -32,6 +35,20 @@ const routes: Routes = [
   {
     path: 'class',
     component: ClassListComponent,
+    children: [
+      {
+        path: 'mycourses',
+        component: MyCoursesComponent,
+      },
+      {
+        path: 'todo',
+        component: TodoMatComponent,
+      },
+      {
+        path: 'calender',
+        component: CalenderComponent,
+      },
+    ],
   },
   {
     path: '**',

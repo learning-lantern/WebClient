@@ -7,7 +7,19 @@ import { environment as env } from 'src/environments/environment';
 })
 export class HttpService {
   constructor(private http: HttpClient) {}
-  doGet() {
-    console.log(env.apiRoot);
+  doGet(url: string, options: {}) {
+    return this.http.get(`${url}`, options);
+  }
+
+  doPost(url: string, body: {}, options: {}) {
+    return this.http.post(`${url}`, body, options);
+  }
+
+  doPatch(url: string, options: {}) {
+    return this.http.patch(`${url}`, options);
+  }
+
+  doDelete(url: string, options: {}) {
+    return this.http.delete(`${url}`, options);
   }
 }

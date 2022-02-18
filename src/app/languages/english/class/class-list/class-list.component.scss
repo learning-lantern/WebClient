@@ -1,0 +1,50 @@
+.class-list-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-container {
+  width: 100%;
+  min-height: 90vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0em 0.5em;
+  height: 10vh;
+  width: 100%;
+  border-bottom: 1px solid rgba(var(--green));
+  background: rgba(var(--very-light-green));
+}
+
+.drawer {
+  width: 200px;
+}
+
+.drawer-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drawer-links a {
+  padding: 1rem;
+  width: 100%;
+  text-decoration: none;
+  color: rgba(var(--green));
+  display: flex;
+  align-items: flex-end;
+}
+
+.drawer-links a:hover {
+  border: 1px solid rgba(var(--green));
+}
+
+.side-fixed {
+  width: 50px;
+}

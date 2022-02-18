@@ -35,7 +35,7 @@
         alt="login"
         style="margin-right: -1.2rem"
       />
-      <a routerLink="auth/login" class="nav-item toggle">Log In</a>
+      <a routerLink="/en/auth/login" class="nav-item toggle">Log In</a>
     </ng-container>
     <ng-container *ngIf="!showLogin">
       <img
@@ -78,7 +78,9 @@
       >Contact Us</a
     >
 
-    <a *ngIf="showLogin" routerLink="auth/login" class="side-item">Log In</a>
+    <a *ngIf="showLogin" routerLink="/en/auth/login" class="side-item"
+      >Log In</a
+    >
 
     <a *ngIf="!showLogin" routerLink="/en/class" class="side-item"
       >My Classroom</a

@@ -5,8 +5,8 @@
 export const environment = {
   apiRoot: 'http://httpbin.org',
   production: false,
-  socketURL: 'localhost:5000',
-  authURL: 'localhost:3000',
+  socketURL: 'http://localhost:5000',
+  authURL: 'http://localhost:3000/auth',
 };
 
 /*

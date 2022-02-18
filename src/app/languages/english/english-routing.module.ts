@@ -51,10 +51,7 @@ const routes: Routes = [
       },
     ],
   },
-  {
-    path: 'to-do',
-    component: TodoMainComponent,
-  },
+
   {
     path: '**',
     component: LandingContainerComponent,

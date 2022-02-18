@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { MaterialModule } from 'src/app/core/material/material.module';
 import { CommonModule } from '@angular/common';
 import { EnglishRoutingModule } from './english-routing.module';
 import { EnglishComponent } from './english.component';
@@ -11,10 +11,10 @@ import { FormContainerComponent } from './auth/form-container/form-container.com
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ChatComponent } from './classroom-list/classroom/chat/chat.component';
-import { TodoContainerComponent } from './todo-list/todo-container/todo-container.component';
-import { TodoHeaderComponent } from './todo-list/todo-header/todo-header.component';
-import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
+import { ClassListComponent } from './class/class-list/class-list.component';
+import { MyCoursesComponent } from './class/my-courses/my-courses.component';
+import { CalenderComponent } from './class/calender/calender.component';
+import { TodoMatComponent } from './class/todo-mat/todo-mat.component';
 
 @NgModule({
   declarations: [
@@ -26,16 +26,17 @@ import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
     FormContainerComponent,
     LoginFormComponent,
     SignupFormComponent,
-    ChatComponent,
-    TodoContainerComponent,
-    TodoHeaderComponent,
-    TodoMainComponent,
+    ClassListComponent,
+    MyCoursesComponent,
+    CalenderComponent,
+    TodoMatComponent,
   ],
   imports: [
     CommonModule,
     EnglishRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    MaterialModule,
   ],
 })
 export class EnglishModule {}

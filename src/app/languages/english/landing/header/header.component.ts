@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,12 +6,16 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isActive = 'home';
   drop = false;
   isHidden = true;
+  showLogin = true;
   constructor(private router: Router) {}
 
+  ngOnInit(): void {
+    if (localStorage.getItem('passport')) this.showLogin = false;
+  }
   changeActive(str: string) {
     this.isActive = str;
   }

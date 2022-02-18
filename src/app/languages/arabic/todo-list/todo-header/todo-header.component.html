@@ -1,0 +1,20 @@
+<div class="header-container">
+  <div class="todo">
+    <img class="img-arabic pointer" routerLink="/en" src="/assets/logoFinal.svg" alt="logo" title="Learning Lantern logo">
+    <p>To Do</p>
+  </div>
+  <div class="search">
+    <form>
+      <input type="text" name="Search" placeholder="بحث" title="بحث" class="pointer">
+    </form>
+  </div>
+  <div class="icons">
+    <img src="/assets/images/setting-icon.svg" alt="setting-icon" title="الأعدادات" class="pointer">
+    <img src="/assets/images/user-icon.svg" alt="user-icon" title="حسابي" class="pointer">
+    <a (click)="dropToggle()" class="nav-item pointer">AR</a>
+    <div class="dropdown-content" [ngStyle]="{ display: drop ? 'flex' : 'none' }">
+      <a class="pointer" (click)="switchLang('ar', 'en')">EN</a>
+      <a class="pointer" (click)="switchLang('en', 'ar')">AR</a>
+
+    </div>
+  </div>

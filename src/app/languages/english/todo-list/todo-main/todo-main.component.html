@@ -1,5 +1,9 @@
 <div class="taskTop">
-  <img src="/assets/images/bar-icon.svg" (click)="showSidebar()" alt="bar-icon">
+  <img
+    src="/assets/images/bar-icon.svg"
+    (click)="showSidebar()"
+    alt="bar-icon"
+  />
   <p>Tasks</p>
 </div>
 <!-- Main Container-->
@@ -7,36 +11,57 @@
   <!-- Left Column -->
   <div class="side-bar" [class.hidden]="isHidden">
     <div class="my-date">
-        <img src="../../../../../assets/images/mydate-icon.svg" alt="my date" />
+      <img src="../../../../../assets/images/mydate-icon.svg" alt="my date" />
       <span>Add to My Day</span>
     </div>
     <div class="mycourses">
-      <img src="/assets/images/mycourses.svg" alt="my Courses" title="my Courses">
+      <img
+        src="/assets/images/mycourses.svg"
+        alt="my Courses"
+        title="my Courses"
+      />
       <span>My Courses</span>
     </div>
     <div class="calendar">
-      <img src="/assets/images/task-calendar.svg" alt="planned Tasks" title="Calendar">
+      <img
+        src="/assets/images/task-calendar.svg"
+        alt="planned Tasks"
+        title="Calendar"
+      />
       <span>Planned Tasks</span>
     </div>
 
     <div class="People">
-      <img src="/assets/images/assigned-icon.svg" alt="Assigned to me" title="People">
+      <img
+        src="/assets/images/assigned-icon.svg"
+        alt="Assigned to me"
+        title="People"
+      />
       <span>Assigned to me</span>
     </div>
 
     <div class="tasks">
-      <img src="/assets/images/tasks-icon.svg" alt="tasks">
+      <img src="/assets/images/tasks-icon.svg" alt="tasks" />
       <span>Tasks</span>
     </div>
     <div class="sidebar-footer">
       <div class="People">
-        <img src="/assets/images/people.svg" alt="People" title="People">
+        <img src="/assets/images/people.svg" alt="People" title="People" />
       </div>
       <div class="calendar">
-        <img src="/assets/images/task-calendar.svg" alt="calendar" title="Calendar">
+        <img
+          src="/assets/images/task-calendar.svg"
+          alt="calendar"
+          title="Calendar"
+        />
       </div>
       <div class="todo">
-        <img routerLink="/to-do" src="/assets/images/to-do-list.svg" alt="todo" title="TO Do">
+        <img
+          routerLink="/to-do"
+          src="/assets/images/to-do-list.svg"
+          alt="todo"
+          title="TO Do"
+        />
       </div>
     </div>
   </div>
@@ -48,59 +73,109 @@
           <label for="addTask" class="form-label">
             <img src="/assets/images/add-icon.svg" alt="add task" />
           </label>
-          <input type="text" id="addTask" class="form-input" name="addTask" formControlName="task"
-            placeholder="Add task" />
+          <input
+            type="text"
+            id="addTask"
+            class="form-input"
+            name="addTask"
+            formControlName="task"
+            placeholder="Add task"
+          />
         </div>
         <div class="icon-container" formGroupName="date">
           <span style="margin-right: 1rem">
             <label for="dueDate">
-              <img src="/assets/images/calendar-icon.svg" alt="" srcset="" title="Add due date" />
+              <img
+                src="/assets/images/calendar-icon.svg"
+                alt=""
+                srcset=""
+                title="Add due date"
+              />
             </label>
-            <input type="date" class="hidden-inplace" style="padding: 0px; border: none; outline: none" name="dueDate"
-              id="dueDate" formControlName="dueDate" />
+            <input
+              type="date"
+              class="hidden-inplace"
+              style="padding: 0px; border: none; outline: none"
+              name="dueDate"
+              id="dueDate"
+              formControlName="dueDate"
+            />
           </span>
           <span style="margin-right: 1rem; display: flex; align-items: center">
             <label (click)="drop = !drop" for="reminder" class="reminder">
-              <img src="/assets/images/repeat-icon.svg" style="margin-right: 0.5rem" />{{ myChoice }}
+              <img
+                src="/assets/images/repeat-icon.svg"
+                style="margin-right: 0.5rem"
+              />{{ myChoice }}
             </label>
-            <div class="drop-down" [ngStyle]="{ display: drop ? 'flex' : 'none' }">
-              <select name="repeat" id="repeat" class="repeat-list" formControlName="repeat" title="Repeat">
+            <div
+              class="drop-down"
+              [ngStyle]="{ display: drop ? 'flex' : 'none' }"
+            >
+              <select
+                name="repeat"
+                id="repeat"
+                class="repeat-list"
+                formControlName="repeat"
+                title="Repeat"
+              >
                 <option (click)="setRepeat('Daily')" value="0">Daily</option>
                 <option (click)="setRepeat('Weekly')" value="1">Weekly</option>
-                <option (click)="setRepeat('Monthly')" value="2">Monthly</option>
+                <option (click)="setRepeat('Monthly')" value="2">
+                  Monthly
+                </option>
                 <option (click)="setRepeat('Yearly')" value="4">Yearly</option>
               </select>
             </div>
           </span>
-          <button type="submit" style="margin-left: auto" class="btn-primary-small">
+          <button
+            type="submit"
+            style="margin-left: auto"
+            class="btn-primary-small"
+          >
             Add
           </button>
         </div>
       </form>
-
     </div>
 
     <div class="task-list">
       <ul>
-        <li *ngFor="let item of taskList; let i=index" (click)="showbar()">
+        <li *ngFor="let item of taskList; let i = index" (click)="showbar()">
           <input class="checkbox" type="checkbox" name="done" id="done" />
           {{ item.task }}
-          <img src="/assets/images/delete-icon.svg" (click)="removeTask(i)" alt="delete Task" title="Delete Task">
+          <img
+            src="/assets/images/delete-icon.svg"
+            (click)="removeTask(i)"
+            alt="delete Task"
+            title="Delete Task"
+          />
         </li>
       </ul>
-
     </div>
   </div>
   <div class="rightcolomm" tabindex="-15"></div>
   <!-- Right Column -->
   <div class="details" [class.hidden]="Hidden">
     <div class="task-name">
-      <input type="checkbox" name="done" id="done" style="margin:0.8rem 0 0 0.7rem;" /> task name
-      <div class="sub-container" style="margin-top: 1rem;">
+      <input
+        type="checkbox"
+        name="done"
+        id="done"
+        style="margin: 0.8rem 0 0 0.7rem"
+      />
+      task name
+      <div class="sub-container" style="margin-top: 1rem">
         <label for="addTask" class="form-label">
           <img src="/assets/images/add-icon.svg" alt="add task" />
         </label>
-        <input type="text" id="addTask" class="form-input" name="addTask" placeholder="Add step" />
+        <input
+          type="text"
+          id="addTask"
+          class="form-input"
+          name="addTask"
+          placeholder="Add step"
+        />
       </div>
     </div>
 
@@ -111,7 +186,6 @@
       <span id="my-day">Add to My Day</span>
     </div>
 
-
     <div class="date">
       <div class="due-date">
         <label for="dueDate">
@@ -119,11 +193,13 @@
         </label>
         <!-- <input type="date" style="padding: 0px; border: none; outline: none" name="dueDate"/> -->
         <span>Add due date</span>
-
       </div>
       <div class="repeat">
         <label for="repeat">
-          <img src="../../../../../assets/images/repeat(black).svg" alt="repeat" />
+          <img
+            src="../../../../../assets/images/repeat(black).svg"
+            alt="repeat"
+          />
         </label>
         <span>Repeat</span>
       </div>
@@ -131,16 +207,20 @@
 
     <div class="add-file">
       <label>
-        <img src="../../../../../assets/images/addfile-icon.svg" alt="">
+        <img src="../../../../../assets/images/addfile-icon.svg" alt="" />
       </label>
       <div class="file-attach">
-        <input id="file" type="file" value="Add file">
+        <input id="file" type="file" value="Add file" />
         <label for="file">Add file</label>
       </div>
     </div>
     <div class="add-note">
-      <textarea name="add note" cols="30" rows="8" placeholder="Add note"></textarea>
+      <textarea
+        name="add note"
+        cols="30"
+        rows="8"
+        placeholder="Add note"
+      ></textarea>
     </div>
-
   </div>
 </div>

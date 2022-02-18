@@ -8,6 +8,7 @@ import { ClassListComponent } from './class/class-list/class-list.component';
 import { MyCoursesComponent } from './class/my-courses/my-courses.component';
 import { TodoMatComponent } from './class/todo-mat/todo-mat.component';
 import { LandingContainerComponent } from './landing/landing-container/landing-container.component';
+import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
 
 const routes: Routes = [
   {
@@ -49,6 +50,10 @@ const routes: Routes = [
         component: CalenderComponent,
       },
     ],
+  },
+  {
+    path: 'to-do',
+    component: TodoMainComponent,
   },
   {
     path: '**',

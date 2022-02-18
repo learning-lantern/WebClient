@@ -4,7 +4,7 @@ import { FormContainerComponent } from './auth/form-container/form-container.com
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
 import { LandingContainerComponent } from './landing/landing-container/landing-container.component';
-
+import { TodoContainerComponent } from './todo-list/todo-container/todo-container.component';
 const routes: Routes = [
   {
     path: '',
@@ -27,6 +27,10 @@ const routes: Routes = [
         data: { name: 'signup' },
       },
     ],
+  },
+  {
+    path: 'to-do',
+    component: TodoContainerComponent,
   },
 ];
 

@@ -19,7 +19,7 @@
   color: rgba(var(--green));
 }
 .taskTop img {
-  margin: 1rem 0 0 1.2rem;
+  margin-top: 1rem;
   height: 22px;
 }
 .task-container {
@@ -123,15 +123,6 @@ form label {
   padding: 1em;
   cursor: pointer;
 }
-.my-date:hover,
-.mycourses:hover,
-.calendar:hover,
-.People:hover,
-.tasks:hover,
-.todo:hover{
-  background-color: #DDFDD8;
-  border: 1px solid #DDFDD8;
-}
 .my-date img,
 .mycourses img,
 .calendar img,
@@ -166,10 +157,16 @@ form label {
 .add-file:hover,
 .mydate:hover,
 .due-date:hover,
-.repeat:hover{
+.repeat:hover,.my-date:hover,
+.mycourses:hover,
+.calendar:hover,
+.People:hover,
+.tasks:hover,
+.todo:hover{
   background-color: #DDFDD8;
   border: 1px solid #DDFDD8;
 }
+
 .date label,
 .add-file label,
 .mydate label,
@@ -208,24 +205,10 @@ form label {
     position: inherit;
     transition: none;
   }
-  .my-date,.mycourses,.calendar,.People,.tasks,.todo {
-    display: flex;
-    padding: 1em;
-    cursor: pointer;
-  }
-  .my-date img,
-  .mycourses img,
-  .calendar img,
-  .People img,
-  .tasks img,
-  .todo img {
-    height: 22px;
-    margin-right: .6rem;
-  }
   .sidebar-footer{
     margin-top: 19.6rem;
   }
   .right-footer{
-    margin-top: 5.6rem;
+    margin-top: 6.5rem;
   }
 }

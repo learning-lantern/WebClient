@@ -6,7 +6,7 @@ import { TodoTask } from 'src/app/interfaces/todo-task.interface';
 @Component({
   selector: 'app-todo-main',
   templateUrl: './todo-main.component.html',
-  styleUrls: ['./todo-main.component.scss'],
+  styleUrls: ['./todo-main.component.scss']
 })
 export class TodoMainComponent implements OnInit {
   drop = false;

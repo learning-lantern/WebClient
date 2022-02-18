@@ -1,75 +1,31 @@
 <div class="container arabic">
-  <a routerLink="/"
-    ><img src="/assets/logoFinal.svg" alt="log" class="logo img-arabic"
-  /></a>
+  <a routerLink="/"><img src="/assets/logoFinal.svg" alt="log" class="logo img-arabic"
+      title="Learning Lantern logo" /></a>
 
   <div class="nav-links toggle">
-    <a
-      routerLink="/ar"
-      class="nav-item"
-      [class.active]="isActive == 'home'"
-      (click)="changeActive('home'); scrollTO('home')"
-      >الصفحة الرئيسية</a
-    >
-    <a
-      class="nav-item"
-      [class.active]="isActive == 'service'"
-      (click)="changeActive('service'); scrollTO('services')"
-      routerLink="/ar"
-    >
-      خدماتنا</a
-    >
-    <a
-      routerLink="#"
-      class="nav-item"
-      [class.active]="isActive == 'about'"
-      (click)="changeActive('about'); scrollTO('contact-us')"
-      routerLink="/ar"
-      >اتصل بنا</a
-    >
+    <a routerLink="/ar" class="nav-item" [class.active]="isActive == 'home'"
+      (click)="changeActive('home'); scrollTO('home')">الصفحة الرئيسية</a>
+    <a class="nav-item" [class.active]="isActive == 'service'" (click)="changeActive('service'); scrollTO('services')"
+      routerLink="/ar">
+      خدماتنا</a>
+    <a routerLink="#" class="nav-item" [class.active]="isActive == 'about'"
+      (click)="changeActive('about'); scrollTO('contact-us')" routerLink="/ar">اتصل بنا</a>
   </div>
   <div class="login">
-    <img
-      class="icon25 toggle img-arabic"
-      src="/assets/images/login-icon.svg"
-      alt="login"
-      style="margin-left: -1.2rem"
-    />
+    <img class="icon25 toggle img-arabic" src="/assets/images/login-icon.svg" alt="login"
+      style="margin-left: -1.2rem" />
     <a routerLink="/ar/auth/login" class="nav-item toggle">تسجيل الدخول</a>
     <a (click)="dropToggle()" class="nav-item pointer">AR</a>
-    <div
-      class="dropdown-content"
-      [ngStyle]="{ display: drop ? 'flex' : 'none' }"
-    >
+    <div class="dropdown-content" [ngStyle]="{ display: drop ? 'flex' : 'none' }">
       <a class="pointer" (click)="switchLang('ar', 'en')">EN</a>
       <a class="pointer" (click)="switchLang('en', 'ar')">AR</a>
     </div>
-    <img
-      src="/assets/images/bars.svg"
-      alt=""
-      class="bars"
-      (click)="showSidebar()"
-    />
+    <img src="/assets/images/bars.svg" alt="" class="bars" (click)="showSidebar()" />
   </div>
   <div class="side-bar" [class.hidden]="isHidden">
-    <a
-      routerLink="/ar"
-      (click)="scrollTO('home'); showSidebar()"
-      class="side-item"
-      >الصفحة الرئيسية</a
-    >
-    <a
-      routerLink="/ar"
-      (click)="scrollTO('services'); showSidebar()"
-      class="side-item"
-      >خدماتنا</a
-    >
-    <a
-      routerLink="/ar"
-      (click)="scrollTO('contact-us'); showSidebar()"
-      class="side-item"
-      >اتصل بنا</a
-    >
+    <a routerLink="/ar" (click)="scrollTO('home'); showSidebar()" class="side-item">الصفحة الرئيسية</a>
+    <a routerLink="/ar" (click)="scrollTO('services'); showSidebar()" class="side-item">خدماتنا</a>
+    <a routerLink="/ar" (click)="scrollTO('contact-us'); showSidebar()" class="side-item">اتصل بنا</a>
     <a routerLink="/ar/auth/login" class="side-item">تسجيل الدخول</a>
   </div>
 </div>

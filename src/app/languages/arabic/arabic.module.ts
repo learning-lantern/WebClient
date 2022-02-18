@@ -10,7 +10,10 @@ import { HeaderComponent } from './landing/header/header.component';
 import { FormContainerComponent } from './auth/form-container/form-container.component';
 import { LoginFormComponent } from './auth/login-form/login-form.component';
 import { SignupFormComponent } from './auth/signup-form/signup-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TodoHeaderComponent } from './todo-list/todo-header/todo-header.component';
+import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
+import { TodoContainerComponent } from './todo-list/todo-container/todo-container.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormContainerComponent,
     LoginFormComponent,
     SignupFormComponent,
+    TodoHeaderComponent,
+    TodoMainComponent,
+    TodoContainerComponent,
   ],
-  imports: [CommonModule, ArabicRoutingModule, ReactiveFormsModule],
+  imports: [CommonModule,
+     ArabicRoutingModule,
+      ReactiveFormsModule,
+      FormsModule,
+    ],
 })
 export class ArabicModule {}

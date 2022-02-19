@@ -15,6 +15,7 @@ import { ClassListComponent } from './class/class-list/class-list.component';
 import { MyCoursesComponent } from './class/my-courses/my-courses.component';
 import { CalenderComponent } from './class/calender/calender.component';
 import { TodoMatComponent } from './class/todo-mat/todo-mat.component';
+import { TodoMainComponent } from './todo-list/todo-main/todo-main.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { TodoMatComponent } from './class/todo-mat/todo-mat.component';
     MyCoursesComponent,
     CalenderComponent,
     TodoMatComponent,
+    TodoMainComponent,
   ],
   imports: [
     CommonModule,

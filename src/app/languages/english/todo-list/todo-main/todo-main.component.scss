@@ -5,6 +5,7 @@
   overflow: hidden;
   z-index: 999;
 }
+
 .taskTop {
   width: 100%;
   display: flex;
@@ -12,16 +13,19 @@
   border-bottom: 1px solid #e9d4d4;
   background: #f5f5f5;
 }
+
 .taskTop p {
   font-weight: 600;
   margin: 1rem 0 0 0.7rem;
   font-size: 1.2rem;
   color: rgba(var(--green));
 }
+
 .taskTop img {
   margin: 1rem 0 0 1.2rem;
   height: 22px;
 }
+
 .task-container {
   width: 100%;
   min-height: 100vh;
@@ -41,9 +45,11 @@
   flex-direction: column;
   align-items: center;
 }
+
 form label {
   margin-bottom: 0;
 }
+
 .form-label {
   background: white;
   width: 50px;
@@ -52,7 +58,8 @@ form label {
   align-items: center;
   justify-content: center;
 }
-.form-input,.steps-input {
+.form-input,
+.steps-input {
   width: 100%;
   border: none;
   background-color: white;
@@ -75,6 +82,7 @@ form label {
   width: 90%;
   align-items: center;
 }
+
 .repeat-list {
   border: none;
   border-radius: 0px;
@@ -82,6 +90,7 @@ form label {
   margin-left: -0.4rem;
   background: #ccc;
 }
+
 .repeat {
   display: flex;
   align-items: center;
@@ -97,12 +106,14 @@ form label {
   border-bottom: 2px solid #989494;
   border-radius: 3px;
 }
+
 .task-list ul {
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }
 .task-list img {
   float: right;
 }
+
 .side-bar,
 .details {
   border-right: 1px solid #e9d4d4;
@@ -112,14 +123,21 @@ form label {
   height: 100vh;
   transition: 0.3s all ease;
 }
+
 .details {
   right: 0;
   border-left: 1px solid #e9d4d4;
 }
-.my-date,.mycourses,.calendar,.People,.tasks,.todo {
+.my-date,
+.mycourses,
+.calendar,
+.People,
+.tasks,
+.todo {
   padding: 1em;
   cursor: pointer;
 }
+
 .my-date img,
 .mycourses img,
 .calendar img,
@@ -127,45 +145,57 @@ form label {
 .tasks img,
 .todo img {
   height: 22px;
-  margin-right: .6rem;
+  margin-right: 0.6rem;
 }
+
 .task:hover,
 .add-file:hover,
 .mydate:hover,
 .due-date:hover,
-.repeat:hover,.my-date:hover,
+.repeat:hover,
+.my-date:hover,
 .mycourses:hover,
 .calendar:hover,
 .People:hover,
 .tasks:hover,
-.todo:hover{
-  background-color: #DDFDD8;
-  border: 1px solid #DDFDD8;
+.todo:hover {
+  background-color: #ddfdd8;
+  border: 1px solid #ddfdd8;
 }
+
 .sidebar-footer {
   display: flex;
   flex-direction: row;
   border-top: 1px solid #989494;
   justify-content: center;
-  justify-content: center;
-  position:absolute;
-  bottom:0;
-  width:100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   box-shadow: -2px -4px 10px darkgray;
 }
-.task-name,.date,.add-file,.mydate,.add-note {
+.task-name,
+.date,
+.add-file,
+.mydate,
+.add-note {
   cursor: pointer;
-  border: 1px solid #D1D9CF;
+  border: 1px solid #d1d9cf;
   background-color: white;
   margin: 1rem 1rem 0.5rem 1rem;
   height: 110px;
   border-radius: 8px;
 }
-.task,.task-steps,.add-file,.mydate,.due-date,.repeat {
+.task,
+.task-steps,
+.add-file,
+.mydate,
+.due-date,
+.repeat {
   height: 50px;
   display: flex;
   padding-top: 1em;
 }
+
 .date label,
 .add-file label,
 .mydate label,
@@ -173,6 +203,7 @@ form label {
 .repeat label {
   padding: 0 1em 0 1em;
 }
+
 .mydate span,
 .date span {
   color: gray;
@@ -184,6 +215,7 @@ form label {
 .file-attach label {
   color: #767678;
 }
+
 .add-note textarea {
   width: 100%;
   padding: 1em;
@@ -193,9 +225,9 @@ form label {
   display: flex;
   border-top: 1px solid #989494;
   justify-content: space-between;
-  position:absolute;
-  bottom:0;
-  width:100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   box-shadow: 3px -2px 10px darkgray;
   padding: 0.5em 0.5em 0 0.5em;
 }

@@ -1,214 +1,228 @@
 .main-container {
-    width: 100%;
-    display: flex;
-    height: 100%;
-    overflow: hidden;
-    z-index: 999;
-  }
-  .taskTop {
-    width: 100%;
-    display: flex;
-    padding: 0 16px 16px 0;
-    border-bottom: 1px solid #e9d4d4;
-    background: #f5f5f5;
-  }
-  .taskTop p {
-    font-weight: 600;
-    margin: 1rem 1rem 0 0.7rem;
-    font-size: 1.2rem;
-    color: rgba(var(--green));
-  }
-  .taskTop img {
-    margin-top: 1rem;
-    height: 22px;
-  }
-  .task-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em;
-  }
-  .add-task-container {
-    border: 2px solid rgba(var(--light-green), 0.5);
-    background: rgba(var(--light-silver));
-    border-radius: 0.5rem;
-  }
-  .myform {
-    display: flex;
-    width: 100%;
-    padding: 1em;
-    flex-direction: column;
-    align-items: center;
-  }
-  form label {
-    margin-bottom: 0;
-  }
-  .form-label {
-    background: white;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .form-input,
-  .steps-input {
-    width: 100%;
-    border: none;
-    background-color: white;
-    height: 50px;
-    border-radius: 0px;
-    outline: none;
-    transition: 0.3 all ease;
-    margin: 0px;
-  }
-  .form-input:focus {
-    border-bottom: 2px solid rgba(var(--light-green));
-  }
-  .sub-container {
-    display: flex;
-    width: 90%;
-  }
-  .icon-container {
-    display: flex;
-    justify-content: flex-start;
-    width: 90%;
-    align-items: center;
-  }
-  .repeat-list {
-    border: none;
-    border-radius: 0px;
-    margin: 0px;
-    margin-left: -0.4rem;
-    background: #ccc;
-  }
-  .repeat {
-    display: flex;
-    align-items: center;
-  }
-  .drop-down {
-    margin-left: 1rem;
-  }
-  .task-list li {
-    min-height: 66px;
-    background: #f0ecec;
-    list-style: none;
-    padding: 20px 14px;
-    border-bottom: 2px solid #989494;
-    border-radius: 3px;
-  }
-  .task-list ul {
-    margin-top: .4rem;
-  }
-  .task-list img {
-    float: left;
-  }
+  width: 100%;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+.taskTop {
+  width: 100%;
+  display: flex;
+  padding: 0 16px 16px 0;
+  border-bottom: 1px solid #e9d4d4;
+  background: #f5f5f5;
+}
+.taskTop p {
+  font-weight: 600;
+  margin: 1rem 1rem 0 0.7rem;
+  font-size: 1.2rem;
+  color: rgba(var(--green));
+}
+.taskTop img {
+  margin-top: 1rem;
+  height: 22px;
+}
+.task-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+.add-task-container {
+  border: 2px solid rgba(var(--light-green), 0.5);
+  background: rgba(var(--light-silver));
+  border-radius: 0.5rem;
+}
+.myform {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+form label {
+  margin-bottom: 0;
+}
+.form-label {
+  background: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-input,
+.steps-input {
+  width: 100%;
+  border: none;
+  background-color: white;
+  height: 50px;
+  border-radius: 0px;
+  outline: none;
+  transition: 0.3 all ease;
+  margin: 0px;
+}
+.form-input:focus {
+  border-bottom: 2px solid rgba(var(--light-green));
+}
+.sub-container {
+  display: flex;
+  width: 90%;
+}
+.icon-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  align-items: center;
+}
+.repeat-list {
+  border: none;
+  border-radius: 0px;
+  margin: 0px;
+  margin-left: -0.4rem;
+  background: #ccc;
+}
+.repeat {
+  display: flex;
+  align-items: center;
+}
+.drop-down {
+  margin-left: 1rem;
+}
+.task-list li {
+  min-height: 66px;
+  background: #f0ecec;
+  list-style: none;
+  padding: 20px 14px;
+  border-bottom: 2px solid #989494;
+  border-radius: 3px;
+}
+.task-list ul {
+  margin-top: 0.4rem;
+}
+.task-list img {
+  float: left;
+}
+.side-bar,
+.details {
+  background: rgba(var(--light-silver));
+  position: absolute;
+  width: 60%;
+  height: 100vh;
+  transition: 0.3s all ease;
+}
+.side-bar {
+  border-left: 1px solid #e9d4d4;
+}
+.details {
+  left: 0;
+  border-right: 1px solid #e9d4d4;
+}
+.my-date,
+.mycourses,
+.calendar,
+.People,
+.tasks,
+.todo {
+  padding: 1em;
+  cursor: pointer;
+}
+.my-date img,
+.mycourses img,
+.calendar img,
+.People img,
+.tasks img,
+.todo img {
+  height: 22px;
+  margin-left: 0.6rem;
+}
+.sidebar-footer {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #989494;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 3px -2px 10px darkgray;
+}
+.task-name,
+.date,
+.add-file,
+.mydate,
+.add-note {
+  border: 1px solid #d1d9cf;
+  background-color: white;
+  margin: 1rem 1rem 0.5rem 1rem;
+  height: 110px;
+  border-radius: 8px;
+}
+.task,
+.task-steps,
+.add-file,
+.mydate,
+.due-date,
+.repeat {
+  height: 50px;
+  display: flex;
+  padding-top: 1em;
+}
+.task:hover,
+.add-file:hover,
+.mydate:hover,
+.due-date:hover,
+.repeat:hover,
+.my-date:hover,
+.mycourses:hover,
+.calendar:hover,
+.People:hover,
+.tasks:hover,
+.todo:hover {
+  background-color: #ddfdd8;
+  border: 1px solid #ddfdd8;
+}
+
+.date label,
+.add-file label,
+.mydate label,
+.due-date label,
+.repeat label {
+  padding: 0 1em 0 1em;
+}
+.mydate span,
+.date span {
+  color: gray;
+}
+.file-attach input {
+  position: absolute;
+  z-index: -1;
+}
+.file-attach label {
+  color: #767678;
+}
+.add-note textarea {
+  width: 100%;
+  padding: 1em;
+  font-size: 16px;
+}
+.right-footer {
+  display: flex;
+  border-top: 1px solid #989494;
+  justify-content: space-between;
+  // margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: -2px -2px 10px darkgray;
+  padding: 0.5em 0.5em 0 0.5em;
+}
+@media all and (min-width: 900px) {
   .side-bar,
   .details {
-    background: rgba(var(--light-silver));
-    position: absolute;
-    width: 60%;
-    height: 100vh;
-    transition: 0.3s all ease;
+    width: 400px;
+    height: auto;
+    position: relative;
+    transition: none;
   }
-  .side-bar {
-    border-left: 1px solid #e9d4d4;
-  }
-  .details {
-    left: 0;
-    border-right: 1px solid #e9d4d4;
-  }
-  .my-date,.mycourses,.calendar,.People,.tasks,.todo {
-    padding: 1em;
-    cursor: pointer;
-  }
-  .my-date img,
-  .mycourses img,
-  .calendar img,
-  .People img,
-  .tasks img,
-  .todo img {
-    height: 22px;
-    margin-left: .6rem;
-  }
-  .sidebar-footer {
-    display: flex;
-    flex-direction: row;
-    border-top: 1px solid #989494;
-    justify-content: center;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    box-shadow: 3px -2px 10px darkgray;
-  }
-  .task-name,.date,.add-file,.mydate,.add-note {
-    border: 1px solid #D1D9CF;
-    background-color: white;
-    margin: 1rem 1rem 0.5rem 1rem;
-    height: 110px;
-    border-radius: 8px;
-  }
-  .task,.task-steps,.add-file,.mydate,.due-date,
-  .repeat {
-    height: 50px;
-    display: flex;
-    padding-top: 1em;
-  }
-  .task:hover,
-  .add-file:hover,
-  .mydate:hover,
-  .due-date:hover,
-  .repeat:hover,.my-date:hover,
-  .mycourses:hover,
-  .calendar:hover,
-  .People:hover,
-  .tasks:hover,
-  .todo:hover{
-    background-color: #DDFDD8;
-    border: 1px solid #DDFDD8;
-  }
-  
-  .date label,
-  .add-file label,
-  .mydate label,
-  .due-date label,
-  .repeat label {
-    padding: 0 1em 0 1em;
-  }
-  .mydate span,
-  .date span {
-    color: gray;
-  }
-  .file-attach input {
-    position: absolute;
-    z-index: -1;
-  }
-  .file-attach label {
-    color: #767678;
-  }
-  .add-note textarea {
-    width: 100%;
-    padding: 1em;
-    font-size: 16px;
-  }
-  .right-footer {
-    display: flex;
-    border-top: 1px solid #989494;
-    justify-content: space-between;
-    // margin-top: 2rem;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    box-shadow: -2px -2px 10px darkgray;
-    padding: 0.5em 0.5em 0 0.5em;
-  }
-  @media all and (min-width: 900px) {
-    .side-bar,.details {
-      width: 400px;
-      height: auto;
-      position:relative;
-      transition: none;
-    }
-
-  }
+}

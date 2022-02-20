@@ -1,0 +1,58 @@
+<div class="class-list-container">
+  <div class="header">
+    <button mat-icon-button (click)="drawer.toggle()" color="primary">
+      <mat-icon style="transform: scale(1.5)">menu</mat-icon>
+    </button>
+    <h2 style="margin: 0px">{{ activeWindow }}</h2>
+    <div class="user-name">
+      <span>user-name</span>
+    </div>
+  </div>
+
+  <mat-drawer-container class="side-container" [hasBackdrop]="true">
+    <mat-drawer #drawer class="drawer" [mode]="'over'">
+      <div class="drawer-links">
+        <a (click)="drawer.toggle()" routerLink="/"
+          ><img src="/assets/logoFinal.svg" alt="log" class="logo"
+        /></a>
+        <a
+          (click)="drawer.toggle(); changeTitle('My Courses')"
+          routerLink="./mycourses"
+        >
+          <mat-icon
+            style="transform: scale(1.5); margin: 0.25rem"
+            color="primary"
+            >home</mat-icon
+          >
+          My Courses
+        </a>
+        <a
+          (click)="drawer.toggle(); changeTitle('My Calendar')"
+          routerLink="./calender"
+        >
+          <mat-icon
+            style="transform: scale(1.5); margin: 0.25rem"
+            color="primary"
+            >calendar_month</mat-icon
+          >
+          Calendar
+        </a>
+        <a
+          (click)="drawer.toggle(); changeTitle('Todo List')"
+          routerLink="./todo"
+        >
+          <img
+            src="/assets/images/todo.png"
+            alt="todo"
+            class="icon30"
+            style="margin: 0.25rem"
+          />
+          Todo
+        </a>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

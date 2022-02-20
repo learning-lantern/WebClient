@@ -14,12 +14,12 @@
 }
 .taskTop p {
   font-weight: 600;
-  margin: 1rem 0 0 0.7rem;
+  margin: 1rem 1rem 0 0.7rem;
   font-size: 1.2rem;
   color: rgba(var(--green));
 }
 .taskTop img {
-  margin: 1rem 0 0 1.2rem;
+  margin-top: 1rem;
   height: 22px;
 }
 .task-container {
@@ -99,7 +99,7 @@ form label {
   border-radius: 3px;
 }
 .task-list ul {
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }
 .task-list img {
   float: left;
@@ -109,28 +109,24 @@ form label {
   background: rgba(var(--light-silver));
   position: absolute;
   width: 60%;
+  height: 100vh;
   transition: 0.3s all ease;
 }
 .side-bar {
-  height: 99.9vh;
   border-left: 1px solid #e9d4d4;
 }
 .details {
   left: 0;
   border-right: 1px solid #e9d4d4;
 }
-.my-date,.mycourses,.calendar,.People,.tasks,.todo {
+.my-date,
+.mycourses,
+.calendar,
+.People,
+.tasks,
+.todo {
   padding: 1em;
   cursor: pointer;
-}
-.my-date:hover,
-.mycourses:hover,
-.calendar:hover,
-.People:hover,
-.tasks:hover,
-.todo:hover{
-  background-color: #DDFDD8;
-  border: 1px solid #DDFDD8;
 }
 .my-date img,
 .mycourses img,
@@ -139,24 +135,34 @@ form label {
 .tasks img,
 .todo img {
   height: 22px;
-  margin-left: .6rem;
+  margin-left: 0.6rem;
 }
 .sidebar-footer {
   display: flex;
   flex-direction: row;
   border-top: 1px solid #989494;
   justify-content: center;
-  margin-top: 14.6rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   box-shadow: 3px -2px 10px darkgray;
 }
-.task-name,.date,.add-file,.mydate,.add-note {
-  border: 1px solid #D1D9CF;
+.task-name,
+.date,
+.add-file,
+.mydate,
+.add-note {
+  border: 1px solid #d1d9cf;
   background-color: white;
   margin: 1rem 1rem 0.5rem 1rem;
   height: 110px;
   border-radius: 8px;
 }
-.task,.task-steps,.add-file,.mydate,.due-date,
+.task,
+.task-steps,
+.add-file,
+.mydate,
+.due-date,
 .repeat {
   height: 50px;
   display: flex;
@@ -166,10 +172,17 @@ form label {
 .add-file:hover,
 .mydate:hover,
 .due-date:hover,
-.repeat:hover{
-  background-color: #DDFDD8;
-  border: 1px solid #DDFDD8;
+.repeat:hover,
+.my-date:hover,
+.mycourses:hover,
+.calendar:hover,
+.People:hover,
+.tasks:hover,
+.todo:hover {
+  background-color: #ddfdd8;
+  border: 1px solid #ddfdd8;
 }
+
 .date label,
 .add-file label,
 .mydate label,
@@ -197,35 +210,19 @@ form label {
   display: flex;
   border-top: 1px solid #989494;
   justify-content: space-between;
-  margin-top: 2rem;
+  // margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   box-shadow: -2px -2px 10px darkgray;
   padding: 0.5em 0.5em 0 0.5em;
 }
 @media all and (min-width: 900px) {
-  .side-bar,.details {
+  .side-bar,
+  .details {
     width: 400px;
     height: auto;
-    position: inherit;
+    position: relative;
     transition: none;
-  }
-  .my-date,.mycourses,.calendar,.People,.tasks,.todo {
-    display: flex;
-    padding: 1em;
-    cursor: pointer;
-  }
-  .my-date img,
-  .mycourses img,
-  .calendar img,
-  .People img,
-  .tasks img,
-  .todo img {
-    height: 22px;
-    margin-right: .6rem;
-  }
-  .sidebar-footer{
-    margin-top: 19.6rem;
-  }
-  .right-footer{
-    margin-top: 5.6rem;
   }
 }

@@ -4,11 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-todo-header',
   templateUrl: './todo-header.component.html',
-  styleUrls: ['./todo-header.component.scss'],
+  styleUrls: ['./todo-header.component.scss']
 })
 export class TodoHeaderComponent implements OnInit {
+
   drop = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   dropToggle() {
     this.drop = !this.drop;
   }
@@ -19,5 +20,7 @@ export class TodoHeaderComponent implements OnInit {
     this.router.navigate([url2]);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
 }

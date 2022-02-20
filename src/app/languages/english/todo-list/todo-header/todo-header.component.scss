@@ -1,5 +1,5 @@
 .header-container {
-  background-color: #DDFDD8;
+  background-color: #ddfdd8;
   display: flex;
   position: sticky;
   top: 0px;
@@ -14,79 +14,90 @@
   font-weight: 500;
   margin-left: 1rem;
   display: flex;
+  width: 42%;
 }
-
 .todo p {
-  margin-top: 1.7rem;
+  margin: 1.7rem 0 0 0.3rem;
 }
 
 .todo img {
   width: 45px;
   cursor: pointer;
-  margin-right: .2rem;
+  margin-right: 0.2rem;
 }
-.search{
+.search {
   margin-right: -4rem;
 }
 
-.search form input[type=text] {
-  width:65% ;
+.search form input[type="text"] {
+  width: 55%;
+
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 13px;
   font-size: 16px;
-  margin-top: 1rem;
-  background-color: white;
-  background-image: url('/assets/images/search-icon.svg');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
+  margin: 1rem 1rem 0 0;
+  background: url("/assets/images/search-icon.svg") no-repeat 10px 10px white;
   padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
-
-.search form input[type=text]:hover {
-  cursor: pointer;
-}
-
 .icons {
   display: flex;
 }
-
 .icons img {
   width: 22px;
-  margin-right: .5rem;
+  margin-right: 0.7rem;
 }
-
-.todo p,
-.icons img:hover {
-  cursor: pointer;
+.nav-item {
+  text-decoration: none;
+  margin: 1.3rem 0 0 0;
+  transition: 0.3s ease all;
+  padding: 0.7em 0.5em;
+  font-weight: 500;
 }
-
+.nav-item:hover {
+  color: rgba(var(--brown));
+}
+.dropdown-content {
+  padding: 1em;
+  width: 150px;
+  background: rgba(var(--very-light-green));
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  z-index: 1001;
+}
+.dropdown-content a {
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: rgba(var(--brown));
+}
 @media all and (min-width: 900px) {
   .todo {
     margin-left: 2rem;
   }
-
   .todo img {
     width: 55px;
     margin-right: 1.2rem;
   }
-
-  .search form input[type=text] {
+  .search {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    margin-right: 8rem;
+  }
+  .search form input[type="text"] {
     width: 300px;
-    
   }
-
-  .search form input[type=text]:focus {
-    width: 105%;
-    margin:1rem 8rem 0 0 ;
-    outline: none;
+  .icons {
+    margin-right: 1.5rem;
   }
-  .icons  img{
+  .icons img {
     width: 26px;
-     justify-content: space-between;
-     margin-right: 2rem; 
+    justify-content: space-between;
+    margin-right: 2rem;
   }
-  
 }

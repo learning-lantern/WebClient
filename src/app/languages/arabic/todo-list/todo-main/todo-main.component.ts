@@ -6,7 +6,7 @@ import { TodoTask } from 'src/app/interfaces/todo-task.interface';
 @Component({
   selector: 'app-todo-main',
   templateUrl: './todo-main.component.html',
-  styleUrls: ['./todo-main.component.scss'],
+  styleUrls: ['./todo-main.component.scss']
 })
 export class TodoMainComponent implements OnInit {
   drop = false;
@@ -15,6 +15,7 @@ export class TodoMainComponent implements OnInit {
   chosen = false;
   myChoice = '';
   taskList: TodoTask[] = [];
+
   addTaskForm: FormGroup;
   constructor(private fb: FormBuilder, private apiserv: ApiService) {
     this.addTaskForm = this.CreatNewTask('task');
@@ -67,5 +68,7 @@ export class TodoMainComponent implements OnInit {
     this.myChoice = str;
     this.drop = !this.drop;
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
 }

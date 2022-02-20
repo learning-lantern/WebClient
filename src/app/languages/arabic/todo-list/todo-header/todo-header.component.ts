@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class TodoHeaderComponent implements OnInit {
 
   drop = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
   dropToggle() {
     this.drop = !this.drop;
   }
